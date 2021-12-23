@@ -1,7 +1,7 @@
 <header class="header-wrap">
     <div class="header-wrap-inner">
         <div class="container">
-            <div class="row flex-nowrap justify-content-between position-relative">
+            <div class="row flex-nowrap justify-content-between position-relative align-items-center">
                 <div class="header-column-left">
                     <div class="sidebar-menu-icon-wrap">
                         <div class="sidebar-menu-icon">
@@ -29,6 +29,13 @@
                 </header-search>
 
                 <div class="header-column-right d-flex">
+                    <a href="{{ route('compare.index') }}" class="header-compare">
+                        <div class="icon-wrap">
+                            <i class="las la-random"></i>
+                        </div>
+                        <span>{{ trans('storefront::layout.compare') }}</span>
+                    </a>
+
                     <a href="{{ route('account.wishlist.index') }}" class="header-wishlist">
                         <div class="icon-wrap">
                             <i class="lar la-heart"></i>
