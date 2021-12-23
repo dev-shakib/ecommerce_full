@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="home-section-inner">
+
                 <div class="home-slider-wrap">
                     <div
                         class="home-slider"

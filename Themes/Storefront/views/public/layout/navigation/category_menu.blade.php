@@ -1,11 +1,15 @@
 <div class="category-nav {{ request()->routeIs('home') ? 'show' : '' }}">
-    <div class="category-nav-inner">
+    {{-- <div class="category-nav-inner">
         {{ trans('storefront::layout.all_categories_header') }}
         <i class="las la-bars"></i>
-    </div>
+    </div> --}}
 
     @if ($categoryMenu->menus()->isNotEmpty())
         <div class="category-dropdown-wrap">
+            <div class="category-nav-inner">
+                {{ trans('storefront::layout.all_categories_header') }}
+                <i class="las la-bars"></i>
+            </div>
             <div class="category-dropdown">
                 <ul class="list-inline mega-menu vertical-megamenu">
                     @foreach ($categoryMenu->menus() as $menu)
