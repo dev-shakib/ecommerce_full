@@ -1,0 +1,13 @@
+.idea/
+.phpintel/
+*.sublime-project
+
+
+/Modules/*/Assets/
+/Themes/*/assets/
+/tags
+mix-manifest.json
+npm-debug.log
+yarn-error.log
+*.map
+.env
