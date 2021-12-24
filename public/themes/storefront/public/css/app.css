@@ -23503,10 +23503,14 @@ textarea.form-control {
 .features-wrap .single-feature {
     position: relative;
     -webkit-box-flex: 0;
-    flex: 0 0 20%;
-    max-width: 20%;
+    /* flex: 0 0 20%;
+    max-width: 20%; */
     margin-top: 30px;
     padding: 0 15px;
+}
+.features-wrap .single-feature {
+	flex: 0 0 25%;
+	max-width: 25%;
 }
 .features-wrap .single-feature:last-child:after {
     width: 0;

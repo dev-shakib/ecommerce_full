@@ -3,7 +3,7 @@
         <div class="container">
             <div class="features">
                 <div class="feature-list">
-                    <div class="single-feature" v-for="(feature, index) in features" :key="index">
+                    <div class="single-feature" v-for="(feature, index ) in features"  :key="index">
                         <div class="feature-icon">
                             <i :class="feature.icon"></i>
                         </div>

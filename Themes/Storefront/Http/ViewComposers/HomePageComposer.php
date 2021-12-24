@@ -23,7 +23,7 @@ class HomePageComposer
         $view->with([
             'slider' => Slider::findWithSlides(setting('storefront_slider')),
             'sliderBanners' => Banner::getSliderBanners(),
-            'features' => Feature::all(),
+            'features' => Feature::all()->take(4),
             'featuredCategories' => $this->featuredCategoriesSection(),
             'threeColumnFullWidthBanners' => $this->threeColumnFullWidthBanners(),
             'productTabsOne' => $this->productTabsOne(),
