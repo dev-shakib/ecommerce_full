@@ -19176,6 +19176,9 @@ span.flatpickr-weekday {
     opacity: 1;
     visibility: visible;
 }
+.btn-add-to-cart:hover {
+    background: var(--color_2) !important;
+}
 .product-card:hover .btn-add-to-cart.disabled,
 .product-card:hover .btn-add-to-cart[disabled] {
     opacity: 0.65;
@@ -19279,7 +19282,7 @@ span.flatpickr-weekday {
     display: flex;
     height: 90px;
     margin-top: auto;
-    padding-bottom: 9px;
+    padding-bottom: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
@@ -19288,7 +19291,7 @@ span.flatpickr-weekday {
     z-index: 0;
 }
 .product-card .product-rating {
-    margin-bottom: 10px;
+    margin-top: 10px;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
@@ -19319,11 +19322,13 @@ span.flatpickr-weekday {
     padding: 12px 0 10px;
     -webkit-transition: 0.15s ease-in-out;
     transition: 0.15s ease-in-out;
+    padding-top: 0;
 }
 .product-card .product-price {
     position: relative;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
+    color: #ef837b;
 }
 /* .product-card .product-price:after {
     position: absolute;
@@ -19352,6 +19357,10 @@ span.flatpickr-weekday {
 	font-size: 13px;
 	width: 100%;
 	padding: 6px 0 4px;
+    margin-top: 70px;
+    border: 2px solid var(--color_2);
+    background: transparent;
+    color: var(--dark);
 }
 .product-card .btn-add-to-cart > i {
     font-size: 15px;
@@ -19497,7 +19506,7 @@ span.flatpickr-weekday {
 }
 .wrapper {
     position: relative;
-    background: #fff;
+    background: var(--color_4);
 }
 .overlay {
     position: fixed;
@@ -19567,7 +19576,6 @@ span.flatpickr-weekday {
 }
 .vertical-products .vertical-products-header {
     margin-bottom: 25px;
-    border-bottom: 1px solid #e5e5e5;
 }
 .vertical-products .section-title {
     padding-bottom: 13px;
@@ -21253,6 +21261,7 @@ textarea.form-control {
 }
 .top-nav-wrap {
     border-bottom: 1px solid #e1e1e1;
+    background: var(--white);
 }
 .top-nav {
     padding: 10px 15px;
@@ -21906,6 +21915,7 @@ textarea.form-control {
 .header-wrap {
     position: relative;
     z-index: 8;
+    background: var(--white);
 }
 .header-wrap-inner {
     padding: 15px 0;
@@ -23285,7 +23295,8 @@ textarea.form-control {
     font-size: 48px;
     font-weight: 300;
     line-height: 48px;
-    color: #191919;
+    color: var(--white);
+    font-weight: 800;
 }
 .home-slider .slide-content .caption-2 {
     font-size: 16px;
@@ -23297,7 +23308,7 @@ textarea.form-control {
     display: none;
     margin-top: 37px;
     padding: 10px 30px;
-    background: var(--color_1);
+    background: var(--color_2);
 }
 .home-slider .slick-arrow {
     height: 50px;
@@ -23701,6 +23712,7 @@ textarea.form-control {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+    background: var(--color_4);
 }
 .banner-wrap.m-t-0 {
     margin-top: 0;
@@ -23829,7 +23841,8 @@ textarea.form-control {
     }
 }
 .landscape-tab-products-wrap {
-    margin-top: 30px;
+    padding-top: 30px;
+    background: var(--color_4);
 }
 .landscape-tab-products-wrap .section-title {
     margin-top: 13px;
@@ -24188,7 +24201,7 @@ textarea.form-control {
 }
 @media screen and (min-width: 992px) {
     .vertical-products-wrap .vertical-products .vertical-products-header {
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
     .vertical-products-wrap .vertical-products .vertical-product-card {
         margin-bottom: 34px;
@@ -27462,9 +27475,26 @@ textarea.form-control {
 .lskit-newsletter {
     border-bottom: 1px solid #e5e5e5;
 }
+.lskit-newsletter .btn.btn-success {
+    background: var(--color_1);
+    transition: 0.3s ease-in-out;
+}
+.lskit-newsletter .btn.btn-success:hover {
+    background: var(--color_2);
+}
 .lskit-title {
 	position: relative;
 	top: 45px;
 	left: 20px;
     font-size: 22px;
+}
+.grid-products-wrap.clearfix {
+	background: var(--color_4);
+}
+.navigation-wrap {
+	background: var(--white);
+}
+.vertical-products-slide.slick-slide.slick-current.slick-active {
+	background: var(--white);
+    padding: 20px 30px;
 }

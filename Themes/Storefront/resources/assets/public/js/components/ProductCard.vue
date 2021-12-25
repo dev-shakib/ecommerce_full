@@ -41,14 +41,15 @@
         </div>
 
         <div class="product-card-middle">
-            <ProductRating :ratingPercent="product.rating_percent" :reviewCount="product.reviews.length"/>
 
             <a :href="productUrl" class="product-name">
                 <h6>{{ product.name }}</h6>
             </a>
 
             <div class="product-price product-price-clone" v-html="product.formatted_price"></div>
+            <ProductRating :ratingPercent="product.rating_percent" :reviewCount="product.reviews.length"/>
         </div>
+
 
         <div class="product-card-bottom">
             <div class="product-price" v-html="product.formatted_price"></div>
