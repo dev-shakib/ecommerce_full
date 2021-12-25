@@ -31,7 +31,7 @@
         <banner-one-column :banner="{{ json_encode($oneColumnBanner) }}"></banner-one-column>
     @endif
 
-
+    <h2 class="lskit-title">Best Deals</h2>
     @if (setting('storefront_product_grid_section_enabled'))
         <product-grid :data="{{ json_encode($productGrid) }}"></product-grid>
     @endif
