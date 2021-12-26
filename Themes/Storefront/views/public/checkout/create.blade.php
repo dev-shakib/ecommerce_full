@@ -11,7 +11,11 @@
     >
         <section class="checkout-wrap">
             <div class="container">
-                @include('public.cart.index.steps')
+
+                {{-- @include('public.cart.index.steps') --}}
+                <div class="text-bg">
+                    <h2 class="text-center">Shopping Cart</h2>
+                </div>
 
                 <form @submit.prevent="placeOrder" @input="errors.clear($event.target.name)">
                     <div class="checkout">
