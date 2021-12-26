@@ -550,12 +550,9 @@ pre code {
     }
 }
 @media (min-width: 1200px) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl {
-        max-width: 1140px;
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1420px;
+        width: 100%;
     }
 }
 .row {
@@ -18949,7 +18946,7 @@ span.flatpickr-weekday {
 .product-badge {
     position: absolute;
     top: -5px;
-    right: 0;
+    left: 0;
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -19177,7 +19174,7 @@ span.flatpickr-weekday {
     visibility: visible;
 }
 .btn-add-to-cart:hover {
-    background: var(--color_2) !important;
+	background: var(--color_2) !important;
 }
 .product-card:hover .btn-add-to-cart.disabled,
 .product-card:hover .btn-add-to-cart[disabled] {
@@ -19194,7 +19191,6 @@ span.flatpickr-weekday {
     width: 85px;
 }
 .product-card .product-badge {
-    right: 0;
     z-index: 1;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
@@ -19732,7 +19728,7 @@ span.flatpickr-weekday {
     margin-right: 0;
 }
 .social-links li a {
-    font-size: 22px;
+    font-size: 28px;
     display: -webkit-box;
     display: flex;
     height: 35px;
@@ -22614,7 +22610,8 @@ textarea.form-control {
     margin-top: 45px;
 }
 .landscape-products-wrap .products-header {
-    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
 }
 .landscape-products-wrap .section-title {
     padding-bottom: 14px;
@@ -23665,6 +23662,7 @@ textarea.form-control {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: var(--dark)
 }
 @media screen and (max-width: 1800px) {
     .featured-categories-wrap .tabs .tab-item {
@@ -25957,6 +25955,7 @@ textarea.form-control {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 15px;
+    font-weight: 400;
 }
 .product-details-info .product-rating {
     font-size: 16px;
@@ -26122,13 +26121,12 @@ textarea.form-control {
 .product-details-info .product-variants .custom-selection > li.disabled:hover {
     border-color: #ebebeb;
 }
-.product-details-info .details-info-middle-actions {
+/* .product-details-info .details-info-middle-actions {
     display: -webkit-box;
     display: flex;
-}
+} */
 .product-details-info .number-picker {
-    display: -webkit-inline-box;
-    display: inline-flex;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
 }
@@ -26205,8 +26203,11 @@ textarea.form-control {
     border-bottom-right-radius: 2px;
 }
 .product-details-info .btn-add-to-cart {
-    margin-left: 20px;
-    padding: 8px 30px;
+	padding: 8px 30px;
+	margin-top: 12px;
+	background: transparent;
+	border: 1px solid var(--color_1);
+	color: var(--color_1);
 }
 .product-details-info .btn-add-to-cart > i {
     margin-right: 6px;
@@ -26232,8 +26233,8 @@ textarea.form-control {
     margin-bottom: 0;
 }
 .product-details-info .additional-info li a {
-    color: #0068e1;
-    color: var(--color-primary);
+	color: var(--dark);
+	margin-left: 10px;
 }
 .product-details-info .additional-info li a:hover {
     color: #0055b8;
@@ -26318,7 +26319,7 @@ textarea.form-control {
     margin-top: 20px;
 }
 .product-details-bottom .product-details-bottom-inner {
-    width: calc(100% - 282px);
+    width: 100%;
     padding-left: 15px;
 }
 .product-details-tab > .tabs {
@@ -26334,6 +26335,7 @@ textarea.form-control {
     font-weight: 500;
     padding: 15px 3px;
     color: #191919;
+    background: var(--color_4);
 }
 @media screen and (max-width: 991px) {
     .product-details-bottom .left-sidebar {
@@ -26575,6 +26577,7 @@ textarea.form-control {
 .product-details-wrap,
 .shopping-cart-wrap {
     margin-top: 50px;
+    padding-bottom: 40px;
 }
 .shopping-cart-wrap .empty-message {
     display: -webkit-box;
@@ -27500,4 +27503,8 @@ textarea.form-control {
 .vertical-products-slide.slick-slide.slick-current.slick-active {
 	background: var(--white);
     padding: 20px 30px;
+}
+.number-picker + .btn-add-to-cart:hover {
+	background: var(--color_1) !important;
+	color: var(--white) !important;
 }

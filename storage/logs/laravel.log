@@ -3749,3 +3749,651 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
+[2021-12-26 09:08:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:08:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:09:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:09:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:10:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:10:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:11:15] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(156): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\files\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#21 {main}
+"} 
+[2021-12-26 09:11:15] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(204): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(178): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#18 C:\\laragon\\www\\files\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#19 {main}
+"} 
+[2021-12-26 09:11:38] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:11:38] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:12:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:12:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:13:38] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(156): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\files\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#21 {main}
+"} 
+[2021-12-26 09:13:38] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(204): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(178): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#18 C:\\laragon\\www\\files\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#19 {main}
+"} 
+[2021-12-26 09:13:38] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:13:39] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:14:17] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(156): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\files\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#21 {main}
+"} 
+[2021-12-26 09:14:17] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(204): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\files\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(178): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#18 C:\\laragon\\www\\files\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#19 {main}
+"} 
+[2021-12-26 09:14:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:14:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:15:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:15:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:15:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:16:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:16:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:17:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:17:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:18:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:18:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:19:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:20:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:21:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:21:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:22:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:23:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:23:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:24:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:25:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:25:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:25:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:26:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:26:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:27:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:28:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:28:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:29:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:29:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:30:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:30:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:31:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:31:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:32:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:33:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:34:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:34:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:35:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:35:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:35:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:36:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:36:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:37:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:37:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:38:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:39:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:39:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:40:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:40:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:41:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:41:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:42:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:42:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:43:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:43:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:44:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:44:35] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:45:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:45:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:45:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:46:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:46:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:47:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:47:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:48:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:48:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:49:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:49:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:50:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:50:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:51:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:51:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:52:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:52:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:53:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:53:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:54:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:54:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:55:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:55:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:56:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:56:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:57:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:57:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:58:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:58:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:59:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 09:59:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:00:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:00:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:01:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:01:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:02:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:02:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:03:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:03:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:04:36] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:04:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:05:39] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:05:39] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:05:39] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:06:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:06:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:07:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:08:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:08:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:09:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:09:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:10:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:10:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:11:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:11:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:12:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-26 10:12:37] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
