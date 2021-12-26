@@ -29,7 +29,7 @@ export default {
             brandBanner: this.initialBrandBanner,
             categoryName: this.initialCategoryName,
             categoryBanner: this.initialCategoryBanner,
-            viewMode: this.initialViewMode,
+            viewMode: 'list',
             queryParams: {
                 query: this.initialQuery,
                 brand: this.initialBrandSlug,

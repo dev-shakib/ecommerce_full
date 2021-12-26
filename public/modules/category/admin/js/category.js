@@ -1,1 +1,447 @@
-!function(e){var t={};function r(n){if(t[n])return t[n].exports;var a=t[n]={i:n,l:!1,exports:{}};return e[n].call(a.exports,a,a.exports,r),a.l=!0,a.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)r.d(n,a,function(t){return e[t]}.bind(null,a));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="/",r(r.s=231)}({231:function(e,t,r){e.exports=r(285)},285:function(e,t,r){"use strict";function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}r.r(t);var a=function(){function e(t,r){var n=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.selector=r,$.jstree.defaults.dnd.touch=!0,$.jstree.defaults.dnd.copy=!1,this.fetchCategoryTree(),r.on("select_node.jstree",(function(e,r){return t.fetchCategory(r.selected[0])})),r.on("loaded.jstree",(function(){return r.jstree("open_all")})),this.selector.on("move_node.jstree",(function(e,t){n.updateCategoryTree(t)}))}var t,r,a;return t=e,(r=[{key:"fetchCategoryTree",value:function(){this.selector.jstree({core:{data:{url:route("admin.categories.tree")},check_callback:!0},plugins:["dnd"]})}},{key:"updateCategoryTree",value:function(e){var t=this;this.loading(e.node,!0),$.ajax({type:"PUT",url:route("admin.categories.tree.update"),data:{category_tree:this.getCategoryTree()},success:function(e){function t(t){return e.apply(this,arguments)}return t.toString=function(){return e.toString()},t}((function(r){success(r),t.loading(e.node,!1)})),error:function(e){function t(t){return e.apply(this,arguments)}return t.toString=function(){return e.toString()},t}((function(r){error(r.responseJSON.message),t.loading(e.node,!1)}))})}},{key:"getCategoryTree",value:function(){return this.selector.jstree(!0).get_json("#",{flat:!0}).reduce((function(e,t){return e.concat({id:t.id,parent_id:"#"===t.parent?null:t.parent,position:t.data.position})}),[])}},{key:"loading",value:function(e,t){var r=this.selector.jstree().get_node(e,!0);t?$(r).addClass("jstree-loading"):$(r).removeClass("jstree-loading")}}])&&n(t.prototype,r),a&&n(t,a),e}();function o(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}new(function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e);var t=$(".category-tree");new a(this,t),this.collapseAll(t),this.expandAll(t),this.addRootCategory(),this.addSubCategory(),$("#category-form").on("submit",this.submit),window.admin.removeSubmitButtonOffsetOn("#image",".category-details-tab li > a")}var t,r,n;return t=e,(r=[{key:"collapseAll",value:function(e){$(".collapse-all").on("click",(function(t){t.preventDefault(),e.jstree("close_all")}))}},{key:"expandAll",value:function(e){$(".expand-all").on("click",(function(t){t.preventDefault(),e.jstree("open_all")}))}},{key:"addRootCategory",value:function(){var e=this;$(".add-root-category").on("click",(function(){e.loading(!0),$(".add-sub-category").addClass("disabled"),$(".category-tree").jstree("deselect_all"),e.clear(),setTimeout(e.loading,150,!1)}))}},{key:"addSubCategory",value:function(){var e=this;$(".add-sub-category").on("click",(function(){var t=$(".category-tree").jstree("get_selected")[0];void 0!==t&&(e.clear(),e.loading(!0),window.form.appendHiddenInput("#category-form","parent_id",t),setTimeout(e.loading,150,!1))}))}},{key:"fetchCategory",value:function(e){var t=this;this.loading(!0),$(".add-sub-category").removeClass("disabled"),$.ajax({type:"GET",url:route("admin.categories.show",e),success:function(e){t.update(e),t.loading(!1)},error:function(e){function t(t){return e.apply(this,arguments)}return t.toString=function(){return e.toString()},t}((function(e){error(e.responseJSON.message),t.loading(!1)}))})}},{key:"update",value:function(e){window.form.removeErrors(),$(".btn-delete").removeClass("hide"),$(".form-group .help-block").remove(),$("#confirmation-form").attr("action",route("admin.categories.destroy",e.id)),$("#id-field").removeClass("hide"),$("#id").val(e.id),$("#name").val(e.name),$("#slug").val(e.slug),$("#slug-field").removeClass("hide"),$(".category-details-tab .seo-tab").removeClass("hide"),$("#is_searchable").prop("checked",e.is_searchable),$("#is_active").prop("checked",e.is_active),$(".logo .image-holder-wrapper").html(this.categoryImage("logo",e.logo)),$(".banner .image-holder-wrapper").html(this.categoryImage("banner",e.banner)),$('#category-form input[name="parent_id"]').remove()}},{key:"categoryImage",value:function(e,t){return t.exists?'\n            <div class="image-holder">\n                <img src="'.concat(t.path,'">\n                <button type="button" class="btn remove-image" data-input-name="files[').concat(e,']"></button>\n                <input type="hidden" name="files[').concat(e,']" value="').concat(t.id,'">\n            </div>\n        '):this.imagePlaceholder()}},{key:"clear",value:function(){$("#id-field").addClass("hide"),$("#id").val(""),$("#name").val(""),$("#slug").val(""),$("#slug-field").addClass("hide"),$(".category-details-tab .seo-tab").addClass("hide"),$("#is_searchable").prop("checked",!1),$("#is_active").prop("checked",!1),$(".logo .image-holder-wrapper").html(this.imagePlaceholder()),$(".banner .image-holder-wrapper").html(this.imagePlaceholder()),$(".btn-delete").addClass("hide"),$(".form-group .help-block").remove(),$('#category-form input[name="parent_id"]').remove(),$(".general-information-tab a").click()}},{key:"imagePlaceholder",value:function(){return'\n            <div class="image-holder placeholder">\n                <i class="fa fa-picture-o"></i>\n            </div>\n        '}},{key:"loading",value:function(e){!0===e?$(".overlay.loader").removeClass("hide"):$(".overlay.loader").addClass("hide")}},{key:"submit",value:function(e){var t=$(".category-tree").jstree("get_selected")[0];$("#slug-field").hasClass("hide")||(window.form.appendHiddenInput("#category-form","_method","put"),$("#category-form").attr("action",route("admin.categories.update",t))),e.currentTarget.submit()}}])&&o(t.prototype,r),n&&o(t,n),e}())}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./Modules/Category/Resources/assets/admin/js/CategoryForm.js":
+/*!********************************************************************!*\
+  !*** ./Modules/Category/Resources/assets/admin/js/CategoryForm.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var _CategoryTree__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoryTree */ "./Modules/Category/Resources/assets/admin/js/CategoryTree.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+
+
+var _default = /*#__PURE__*/function () {
+  function _default() {
+    _classCallCheck(this, _default);
+
+    var tree = $('.category-tree');
+    new _CategoryTree__WEBPACK_IMPORTED_MODULE_0__["default"](this, tree);
+    this.collapseAll(tree);
+    this.expandAll(tree);
+    this.addRootCategory();
+    this.addSubCategory();
+    $('#category-form').on('submit', this.submit);
+    window.admin.removeSubmitButtonOffsetOn('#image', '.category-details-tab li > a');
+  }
+
+  _createClass(_default, [{
+    key: "collapseAll",
+    value: function collapseAll(tree) {
+      $('.collapse-all').on('click', function (e) {
+        e.preventDefault();
+        tree.jstree('close_all');
+      });
+    }
+  }, {
+    key: "expandAll",
+    value: function expandAll(tree) {
+      $('.expand-all').on('click', function (e) {
+        e.preventDefault();
+        tree.jstree('open_all');
+      });
+    }
+  }, {
+    key: "addRootCategory",
+    value: function addRootCategory() {
+      var _this = this;
+
+      $('.add-root-category').on('click', function () {
+        _this.loading(true);
+
+        $('.add-sub-category').addClass('disabled');
+        $('.category-tree').jstree('deselect_all');
+
+        _this.clear(); // Intentionally delay 150ms so that user feel new form is loaded.
+
+
+        setTimeout(_this.loading, 150, false);
+      });
+    }
+  }, {
+    key: "addSubCategory",
+    value: function addSubCategory() {
+      var _this2 = this;
+
+      $('.add-sub-category').on('click', function () {
+        var selectedId = $('.category-tree').jstree('get_selected')[0];
+
+        if (selectedId === undefined) {
+          return;
+        }
+
+        _this2.clear();
+
+        _this2.loading(true);
+
+        window.form.appendHiddenInput('#category-form', 'parent_id', selectedId); // Intentionally delay 150ms so that user feel new form is loaded.
+
+        setTimeout(_this2.loading, 150, false);
+      });
+    }
+  }, {
+    key: "fetchCategory",
+    value: function fetchCategory(id) {
+      var _this3 = this;
+
+      this.loading(true);
+      $('.add-sub-category').removeClass('disabled');
+      $.ajax({
+        type: 'GET',
+        url: route('admin.categories.show', id),
+        success: function success(category) {
+          _this3.update(category);
+
+          _this3.loading(false);
+        },
+        error: function (_error) {
+          function error(_x) {
+            return _error.apply(this, arguments);
+          }
+
+          error.toString = function () {
+            return _error.toString();
+          };
+
+          return error;
+        }(function (xhr) {
+          error(xhr.responseJSON.message);
+
+          _this3.loading(false);
+        })
+      });
+    }
+  }, {
+    key: "update",
+    value: function update(category) {
+      window.form.removeErrors();
+      $('.btn-delete').removeClass('hide');
+      $('.form-group .help-block').remove();
+      $('#confirmation-form').attr('action', route('admin.categories.destroy', category.id));
+      $('#id-field').removeClass('hide');
+      $('#id').val(category.id);
+      $('#name').val(category.name);
+      $('#slug').val(category.slug);
+      $('#slug-field').removeClass('hide');
+      $('.category-details-tab .seo-tab').removeClass('hide');
+      $('#is_searchable').prop('checked', category.is_searchable);
+      $('#is_active').prop('checked', category.is_active);
+      $('.logo .image-holder-wrapper').html(this.categoryImage('logo', category.logo));
+      $('.banner .image-holder-wrapper').html(this.categoryImage('banner', category.banner));
+      $('#category-form input[name="parent_id"]').remove();
+    }
+  }, {
+    key: "categoryImage",
+    value: function categoryImage(fieldName, file) {
+      if (!file.exists) {
+        return this.imagePlaceholder();
+      }
+
+      return "\n            <div class=\"image-holder\">\n                <img src=\"".concat(file.path, "\">\n                <button type=\"button\" class=\"btn remove-image\" data-input-name=\"files[").concat(fieldName, "]\"></button>\n                <input type=\"hidden\" name=\"files[").concat(fieldName, "]\" value=\"").concat(file.id, "\">\n            </div>\n        ");
+    }
+  }, {
+    key: "clear",
+    value: function clear() {
+      $('#id-field').addClass('hide');
+      $('#id').val('');
+      $('#name').val('');
+      $('#slug').val('');
+      $('#slug-field').addClass('hide');
+      $('.category-details-tab .seo-tab').addClass('hide');
+      $('#is_searchable').prop('checked', false);
+      $('#is_active').prop('checked', false);
+      $('.logo .image-holder-wrapper').html(this.imagePlaceholder());
+      $('.banner .image-holder-wrapper').html(this.imagePlaceholder());
+      $('.btn-delete').addClass('hide');
+      $('.form-group .help-block').remove();
+      $('#category-form input[name="parent_id"]').remove();
+      $('.general-information-tab a').click();
+    }
+  }, {
+    key: "imagePlaceholder",
+    value: function imagePlaceholder() {
+      return "\n            <div class=\"image-holder placeholder\">\n                <i class=\"fa fa-picture-o\"></i>\n            </div>\n        ";
+    }
+  }, {
+    key: "loading",
+    value: function loading(state) {
+      if (state === true) {
+        $('.overlay.loader').removeClass('hide');
+      } else {
+        $('.overlay.loader').addClass('hide');
+      }
+    }
+  }, {
+    key: "submit",
+    value: function submit(e) {
+      var selectedId = $('.category-tree').jstree('get_selected')[0];
+
+      if (!$('#slug-field').hasClass('hide')) {
+        window.form.appendHiddenInput('#category-form', '_method', 'put');
+        $('#category-form').attr('action', route('admin.categories.update', selectedId));
+      }
+
+      e.currentTarget.submit();
+    }
+  }]);
+
+  return _default;
+}();
+
+
+
+/***/ }),
+
+/***/ "./Modules/Category/Resources/assets/admin/js/CategoryTree.js":
+/*!********************************************************************!*\
+  !*** ./Modules/Category/Resources/assets/admin/js/CategoryTree.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var _default = /*#__PURE__*/function () {
+  function _default(categoryForm, selector) {
+    var _this = this;
+
+    _classCallCheck(this, _default);
+
+    this.selector = selector;
+    $.jstree.defaults.dnd.touch = true;
+    $.jstree.defaults.dnd.copy = false;
+    this.fetchCategoryTree(); // On selecting a category.
+
+    selector.on('select_node.jstree', function (e, node) {
+      return categoryForm.fetchCategory(node.selected[0]);
+    }); // Expand categories when jstree is loaded.
+
+    selector.on('loaded.jstree', function () {
+      return selector.jstree('open_all');
+    }); // On updating category tree.
+
+    this.selector.on('move_node.jstree', function (e, data) {
+      _this.updateCategoryTree(data);
+    });
+  }
+
+  _createClass(_default, [{
+    key: "fetchCategoryTree",
+    value: function fetchCategoryTree() {
+      this.selector.jstree({
+        core: {
+          data: {
+            url: route('admin.categories.tree')
+          },
+          check_callback: true
+        },
+        plugins: ['dnd']
+      });
+    }
+  }, {
+    key: "updateCategoryTree",
+    value: function updateCategoryTree(data) {
+      var _this2 = this;
+
+      this.loading(data.node, true);
+      $.ajax({
+        type: 'PUT',
+        url: route('admin.categories.tree.update'),
+        data: {
+          category_tree: this.getCategoryTree()
+        },
+        success: function (_success) {
+          function success(_x) {
+            return _success.apply(this, arguments);
+          }
+
+          success.toString = function () {
+            return _success.toString();
+          };
+
+          return success;
+        }(function (message) {
+          success(message);
+
+          _this2.loading(data.node, false);
+        }),
+        error: function (_error) {
+          function error(_x2) {
+            return _error.apply(this, arguments);
+          }
+
+          error.toString = function () {
+            return _error.toString();
+          };
+
+          return error;
+        }(function (xhr) {
+          error(xhr.responseJSON.message);
+
+          _this2.loading(data.node, false);
+        })
+      });
+    }
+  }, {
+    key: "getCategoryTree",
+    value: function getCategoryTree() {
+      var categories = this.selector.jstree(true).get_json('#', {
+        flat: true
+      });
+      return categories.reduce(function (formatted, category) {
+        return formatted.concat({
+          id: category.id,
+          parent_id: category.parent === '#' ? null : category.parent,
+          position: category.data.position
+        });
+      }, []);
+    }
+  }, {
+    key: "loading",
+    value: function loading(node, state) {
+      var nodeElement = this.selector.jstree().get_node(node, true);
+
+      if (state) {
+        $(nodeElement).addClass('jstree-loading');
+      } else {
+        $(nodeElement).removeClass('jstree-loading');
+      }
+    }
+  }]);
+
+  return _default;
+}();
+
+
+
+/***/ }),
+
+/***/ "./Modules/Category/Resources/assets/admin/js/main.js":
+/*!************************************************************!*\
+  !*** ./Modules/Category/Resources/assets/admin/js/main.js ***!
+  \************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CategoryForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoryForm */ "./Modules/Category/Resources/assets/admin/js/CategoryForm.js");
+
+new _CategoryForm__WEBPACK_IMPORTED_MODULE_0__["default"]();
+
+/***/ }),
+
+/***/ 4:
+/*!******************************************************************!*\
+  !*** multi ./Modules/Category/Resources/assets/admin/js/main.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! C:\laragon\www\ecommerce_full\Modules\Category\Resources\assets\admin\js\main.js */"./Modules/Category/Resources/assets/admin/js/main.js");
+
+
+/***/ })
+
+/******/ });

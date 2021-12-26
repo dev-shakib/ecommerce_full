@@ -190,11 +190,11 @@
                         </div>
                     </div>
 
-                    @include('public.products.show.right_sidebar')
+                    {{-- @include('public.products.show.right_sidebar') --}}
                 </div>
 
                 <div class="product-details-bottom flex-column-reverse flex-lg-row">
-                    @include('public.products.show.left_sidebar')
+                    {{-- @include('public.products.show.left_sidebar') --}}
 
                     <div class="product-details-bottom-inner">
                         <div class="product-details-tab clearfix">

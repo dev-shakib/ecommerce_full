@@ -26,6 +26,8 @@
                     <h6>{{ product.name }}</h6>
                 </a>
 
+                <p>{{product.description}}</p>
+
                 <div class="clearfix"></div>
 
                 <ProductRating :ratingPercent="product.rating_percent" :reviewCount="product.reviews.length"/>

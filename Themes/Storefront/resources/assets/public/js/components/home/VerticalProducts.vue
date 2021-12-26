@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xl-4 col-lg-6">
+    <div class="col-xl-6 col-lg-6">
         <div class="vertical-products">
             <div class="vertical-products-header">
                 <h4 class="section-title">{{ title }}</h4>

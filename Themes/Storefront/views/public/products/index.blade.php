@@ -84,16 +84,6 @@
                                         <div class="view-type">
                                             <button
                                                 type="submit"
-                                                class="btn btn-grid-view"
-                                                :class="{ active: viewMode === 'grid' }"
-                                                title="{{ trans('storefront::products.grid_view') }}"
-                                                @click="viewMode = 'grid'"
-                                            >
-                                                <i class="las la-th-large"></i>
-                                            </button>
-
-                                            <button
-                                                type="submit"
                                                 class="btn btn-list-view"
                                                 :class="{ active: viewMode === 'list' }"
                                                 title="{{ trans('storefront::products.list_view') }}"
@@ -101,6 +91,16 @@
                                             >
                                                 <i class="las la-list"></i>
                                             </button>
+
+                                            <button
+                                                type="submit"
+                                                class="btn btn-grid-view"
+                                                :class="{ active: viewMode === 'grid' }"
+                                                title="{{ trans('storefront::products.grid_view') }}"
+                                                @click="viewMode = 'grid'"
+                                            >
+                                            <i class="las la-th-large"></i>
+                                        </button>
                                         </div>
 
                                         <div class="form-group m-r-20">

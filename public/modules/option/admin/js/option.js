@@ -1,1 +1,729 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var r=e[o]={i:o,l:!1,exports:{}};return t[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var r in t)n.d(o,r,function(e){return t[e]}.bind(null,r));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=243)}({243:function(t,e,n){t.exports=n(283)},283:function(t,e,n){"use strict";function o(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){if(!(Symbol.iterator in Object(t)||"[object Arguments]"===Object.prototype.toString.call(t)))return;var n=[],o=!0,r=!1,i=void 0;try{for(var a,l=t[Symbol.iterator]();!(o=(a=l.next()).done)&&(n.push(a.value),!e||n.length!==e);o=!0);}catch(t){r=!0,i=t}finally{try{o||null==l.return||l.return()}finally{if(r)throw i}}return n}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance")}()}function r(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}n.r(e);var i=function(){function t(){!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t)}var e,n,i;return e=t,(n=[{key:"addOptionsErrors",value:function(t){for(var e in t){var n=this.getInputFieldForErrorKey(e);n.closest(".option").addClass("option-has-errors"),n.parent().append('<span class="help-block">'.concat(t[e][0],"</span>"))}}},{key:"getRowTemplate",value:function(t){var e=_.template($("#option-select-values-template").html());return $(e(t))}},{key:"changeOptionType",value:function(t){var e=t.optionId,n=t.type,o=t.values,r=void 0===o?[]:o,i=this.getOptionValuesElement(e),a=this.getTemplateType(n,i),l={optionId:e,value:{id:"",label:"",price:"",price_type:"fixed"}};if(!this.shouldNotChangeTemplate(a,i)){0!==r.length&&"text"===a&&(l.value=r[0]);var u=_.template($("#option-".concat(a,"-template")).html());i.html(u(l)),"select"===a&&(this.addOptionRowEventListener(e),this.addOptionRows({optionId:e,values:r}),0===r.length&&this.getAddNewRowButton(e).trigger("click"))}}},{key:"addOptionRows",value:function(t){var e=t.optionId,n=t.values,r=!0,i=!1,a=void 0;try{for(var l,u=n.entries()[Symbol.iterator]();!(r=(l=u.next()).done);r=!0){var c=o(l.value,2),p=c[0],s=c[1];this.addOptionRow({optionId:e,valueId:p,value:s})}}catch(t){i=!0,a=t}finally{try{r||null==u.return||u.return()}finally{if(i)throw a}}}},{key:"getTemplateType",value:function(t){return this.templateTypeIsText(t)?"text":this.templateTypeIsSelect(t)?"select":void 0}},{key:"templateTypeIsText",value:function(t){return["field","textarea","date","date_time","time"].includes(t)}},{key:"templateTypeIsSelect",value:function(t){return["dropdown","checkbox","checkbox_custom","radio","radio_custom","multiple_select"].includes(t)}},{key:"shouldNotChangeTemplate",value:function(t,e){return void 0===t||this.alreadyHasCurrentTemplate(t,e)}},{key:"alreadyHasCurrentTemplate",value:function(t,e){return"text"===t?e.children().hasClass("option-text"):"select"===t?e.children().hasClass("option-select"):void 0}},{key:"initOptionRow",value:function(t,e){0===e.length||e.is(".sortable")||(this.makeSortable(e[0]),e.addClass("sortable")),this.deleteOptionRowEventListener(t),window.admin.tooltip()}},{key:"deleteOptionRowEventListener",value:function(t){t.find(".delete-row").on("click",(function(t){$(t.currentTarget).closest(".option-row").remove()}))}},{key:"makeSortable",value:function(t){Sortable.create(t,{handle:".drag-icon",animation:150})}}])&&r(e.prototype,n),i&&r(e,i),t}();function a(t){return(a="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function l(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function u(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function c(t,e){return(c=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function p(t,e,n){return(p="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var o=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=s(t)););return t}(t,e);if(o){var r=Object.getOwnPropertyDescriptor(o,e);return r.get?r.get.call(n):r.value}})(t,e,n||t)}function s(t){return(s=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}var f=function(t){function e(){var t,n,o;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),n=this,o=s(e).call(this),t=!o||"object"!==a(o)&&"function"!=typeof o?u(n):o;var r=FleetCart.data["option.values"];return $("#type").on("change",(function(n){p(s(e.prototype),"changeOptionType",u(t)).call(u(t),{type:n.currentTarget.value,values:r}),p(s(e.prototype),"addOptionsErrors",u(t)).call(u(t),FleetCart.errors["option.values"])})),$("#type").trigger("change"),window.admin.removeSubmitButtonOffsetOn("#values"),t}var n,o,r;return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&c(t,e)}(e,t),n=e,(o=[{key:"addOptionRow",value:function(t){var n=t.valueId,o=t.value,r=void 0===o?{label:"",price:"",price_type:"fixed"}:o,i=this.getRowTemplate({optionId:void 0,valueId:n,value:r}),a=$("#select-values").append(i);p(s(e.prototype),"initOptionRow",this).call(this,i,a)}},{key:"addOptionRowEventListener",value:function(){var t=this;$("#add-new-row").on("click",(function(){var e=$("#option-values .option-row").length;t.addOptionRow({valueId:e})}))}},{key:"getOptionValuesElement",value:function(){return $("#option-values")}},{key:"getAddNewRowButton",value:function(){return $("#add-new-row")}},{key:"getInputFieldForErrorKey",value:function(t){var e=t.split(".");return e=e.map((function(t){return t.split("_").join("-")})),$("#".concat(e.join("-")))}}])&&l(n.prototype,o),r&&l(n,r),e}(i);function d(t){return(d="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function v(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}function y(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}function h(t,e){return(h=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t})(t,e)}function m(t,e,n){return(m="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,n){var o=function(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=b(t)););return t}(t,e);if(o){var r=Object.getOwnPropertyDescriptor(o,e);return r.get?r.get.call(n):r.value}})(t,e,n||t)}function b(t){return(b=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)})(t)}var g=function(t){function e(){var t,n,o;return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,e),n=this,o=b(e).call(this),(t=!o||"object"!==d(o)&&"function"!=typeof o?y(n):o).optionsCount=0,t.addOptions(FleetCart.data["product.options"]),0===t.optionsCount&&t.addOption(),t.optionsCount>3&&t.collapseOptions(),m(b(e.prototype),"addOptionsErrors",y(t)).call(y(t),FleetCart.errors["product.options"]),$("#add-new-option").on("click",(function(){return t.addOption()})),$("#add-global-option").on("click",(function(){return t.addGlobalOption()})),t}var n,o,r;return function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&h(t,e)}(e,t),n=e,(o=[{key:"addOptions",value:function(t){var e=!0,n=!1,o=void 0;try{for(var r,i=t[Symbol.iterator]();!(e=(r=i.next()).done);e=!0){var a=r.value;this.addOption(a)}}catch(t){n=!0,o=t}finally{try{e||null==i.return||i.return()}finally{if(n)throw o}}}},{key:"collapseOptions",value:function(){var t=$(".option:not(.option-has-errors)"),e=!0,n=!1,o=void 0;try{for(var r,i=t[Symbol.iterator]();!(e=(r=i.next()).done);e=!0){var a=r.value;$(a).find("[data-toggle=collapse]").trigger("click")}}catch(t){n=!0,o=t}finally{try{e||null==i.return||i.return()}finally{if(n)throw o}}}},{key:"addGlobalOption",value:function(){var t=this,e=$("#global-option").val();if(""===e)return window.admin.stopButtonLoading($("#add-global-option"));$.ajax({type:"GET",url:route("admin.options.show",e),dataType:"json",success:function(e){t.addOption(e),window.admin.stopButtonLoading($("#add-global-option"))}})}},{key:"addOption",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{id:null,name:null,type:null,is_required:!1,values:[]};t.is_required=!!JSON.parse(t.is_required);var n=this.optionsCount,o=_.template($("#option-template").html()),r=$(o({option:t,optionId:n}));null!==t.name&&setTimeout((function(){$("#option-".concat(n)).find("#option-name").text(t.name)}));var i=$("#options-group").append(r);i.is(".sortable")||(m(b(e.prototype),"makeSortable",this).call(this,i[0]),i.addClass("sortable")),this.deleteOptionEventListener(r),this.updateOptionNameEventListener(n),this.updateTemplateEventListener(n,t.values),window.admin.tooltip(),this.optionsCount++}},{key:"deleteOptionEventListener",value:function(t){t.find(".delete-option").on("click",(function(t){return $(t.currentTarget).closest(".option").remove()}))}},{key:"updateOptionNameEventListener",value:function(t){var e=$("#option-".concat(t)),n=e.find("#option-name").text();$(e).find(".option-name-field").on("input",(function(t){var o=""!==t.currentTarget.value?t.currentTarget.value:n;e.find("#option-name").text(o)}))}},{key:"updateTemplateEventListener",value:function(t){var n=this,o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],r=$("#option-".concat(t,"-type"));r.on("change",(function(r){var i=r.currentTarget.value;if(""===i)return n.getOptionValuesElement(t).html("");m(b(e.prototype),"changeOptionType",n).call(n,{optionId:t,type:i,values:o})})),r.trigger("change")}},{key:"addOptionRow",value:function(t){var n=t.optionId,o=t.valueId,r=t.value,i=void 0===r?{label:"",price:"",price_type:"fixed"}:r,a=this.getRowTemplate({optionId:n,valueId:o,value:i}),l=$("#option-".concat(n,"-select-values")).append(a);m(b(e.prototype),"initOptionRow",this).call(this,a,l)}},{key:"addOptionRowEventListener",value:function(t){var e=this;$("#option-".concat(t,"-add-new-row")).on("click",(function(){var n=$("#option-".concat(t,"-values .option-row")).length;e.addOptionRow({optionId:t,valueId:n})}))}},{key:"getOptionValuesElement",value:function(t){return $("#option-".concat(t,"-values"))}},{key:"getAddNewRowButton",value:function(t){return $("#option-".concat(t,"-add-new-row"))}},{key:"getInputFieldForErrorKey",value:function(t){var e=t.split(".");return e.shift(),e=e.map((function(t){return t.split("_").join("-")})),$("#option-".concat(e.join("-")))}}])&&v(n.prototype,o),r&&v(n,r),e}(i);0!==$("#option-create-form, #option-edit-form").length&&new f,0!==$("#product-create-form, #product-edit-form").length&&new g}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./Modules/Option/Resources/assets/admin/js/BaseOption.js":
+/*!****************************************************************!*\
+  !*** ./Modules/Option/Resources/assets/admin/js/BaseOption.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var _default = /*#__PURE__*/function () {
+  function _default() {
+    _classCallCheck(this, _default);
+  }
+
+  _createClass(_default, [{
+    key: "addOptionsErrors",
+    value: function addOptionsErrors(errors) {
+      for (var key in errors) {
+        var inputField = this.getInputFieldForErrorKey(key);
+        inputField.closest('.option').addClass('option-has-errors');
+        var parent = inputField.parent();
+        parent.append("<span class=\"help-block\">".concat(errors[key][0], "</span>"));
+      }
+    }
+  }, {
+    key: "getRowTemplate",
+    value: function getRowTemplate(data) {
+      var template = _.template($('#option-select-values-template').html());
+
+      return $(template(data));
+    }
+  }, {
+    key: "changeOptionType",
+    value: function changeOptionType(_ref) {
+      var optionId = _ref.optionId,
+          type = _ref.type,
+          _ref$values = _ref.values,
+          values = _ref$values === void 0 ? [] : _ref$values;
+      var optionValuesElement = this.getOptionValuesElement(optionId);
+      var templateType = this.getTemplateType(type, optionValuesElement);
+      var optionValuesData = {
+        optionId: optionId,
+        value: {
+          id: '',
+          label: '',
+          price: '',
+          price_type: 'fixed'
+        }
+      };
+
+      if (this.shouldNotChangeTemplate(templateType, optionValuesElement)) {
+        return;
+      }
+
+      if (values.length !== 0 && templateType === 'text') {
+        optionValuesData.value = values[0];
+      }
+
+      var template = _.template($("#option-".concat(templateType, "-template")).html());
+
+      optionValuesElement.html(template(optionValuesData));
+
+      if (templateType === 'select') {
+        this.addOptionRowEventListener(optionId);
+        this.addOptionRows({
+          optionId: optionId,
+          values: values
+        });
+
+        if (values.length === 0) {
+          this.getAddNewRowButton(optionId).trigger('click');
+        }
+      }
+    }
+  }, {
+    key: "addOptionRows",
+    value: function addOptionRows(_ref2) {
+      var optionId = _ref2.optionId,
+          values = _ref2.values;
+
+      var _iterator = _createForOfIteratorHelper(values.entries()),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var _step$value = _slicedToArray(_step.value, 2),
+              index = _step$value[0],
+              value = _step$value[1];
+
+          this.addOptionRow({
+            optionId: optionId,
+            valueId: index,
+            value: value
+          });
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    }
+  }, {
+    key: "getTemplateType",
+    value: function getTemplateType(type) {
+      if (this.templateTypeIsText(type)) {
+        return 'text';
+      }
+
+      if (this.templateTypeIsSelect(type)) {
+        return 'select';
+      }
+    }
+  }, {
+    key: "templateTypeIsText",
+    value: function templateTypeIsText(type) {
+      return ['field', 'textarea', 'date', 'date_time', 'time'].includes(type);
+    }
+  }, {
+    key: "templateTypeIsSelect",
+    value: function templateTypeIsSelect(type) {
+      return ['dropdown', 'checkbox', 'checkbox_custom', 'radio', 'radio_custom', 'multiple_select'].includes(type);
+    }
+  }, {
+    key: "shouldNotChangeTemplate",
+    value: function shouldNotChangeTemplate(templateType, optionValuesElement) {
+      return templateType === undefined || this.alreadyHasCurrentTemplate(templateType, optionValuesElement);
+    }
+  }, {
+    key: "alreadyHasCurrentTemplate",
+    value: function alreadyHasCurrentTemplate(templateType, optionValuesElement) {
+      if (templateType === 'text') {
+        return optionValuesElement.children().hasClass('option-text');
+      }
+
+      if (templateType === 'select') {
+        return optionValuesElement.children().hasClass('option-select');
+      }
+    }
+  }, {
+    key: "initOptionRow",
+    value: function initOptionRow(template, selectValues) {
+      if (selectValues.length !== 0 && !selectValues.is('.sortable')) {
+        this.makeSortable(selectValues[0]);
+        selectValues.addClass('sortable');
+      }
+
+      this.deleteOptionRowEventListener(template);
+      window.admin.tooltip();
+    }
+  }, {
+    key: "deleteOptionRowEventListener",
+    value: function deleteOptionRowEventListener(row) {
+      row.find('.delete-row').on('click', function (e) {
+        $(e.currentTarget).closest('.option-row').remove();
+      });
+    }
+  }, {
+    key: "makeSortable",
+    value: function makeSortable(el) {
+      Sortable.create(el, {
+        handle: '.drag-icon',
+        animation: 150
+      });
+    }
+  }]);
+
+  return _default;
+}();
+
+
+
+/***/ }),
+
+/***/ "./Modules/Option/Resources/assets/admin/js/Option.js":
+/*!************************************************************!*\
+  !*** ./Modules/Option/Resources/assets/admin/js/Option.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var _BaseOption__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseOption */ "./Modules/Option/Resources/assets/admin/js/BaseOption.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } Object.defineProperty(subClass, "prototype", { value: Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }), writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
+
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var _default = /*#__PURE__*/function (_BaseOption) {
+  _inherits(_default, _BaseOption);
+
+  var _super = _createSuper(_default);
+
+  function _default() {
+    var _thisSuper, _thisSuper2, _this;
+
+    _classCallCheck(this, _default);
+
+    _this = _super.call(this);
+    var values = FleetCart.data['option.values'];
+    $('#type').on('change', function (e) {
+      _get((_thisSuper = _assertThisInitialized(_this), _getPrototypeOf(_default.prototype)), "changeOptionType", _thisSuper).call(_thisSuper, {
+        type: e.currentTarget.value,
+        values: values
+      });
+
+      _get((_thisSuper2 = _assertThisInitialized(_this), _getPrototypeOf(_default.prototype)), "addOptionsErrors", _thisSuper2).call(_thisSuper2, FleetCart.errors['option.values']);
+    });
+    $('#type').trigger('change');
+    window.admin.removeSubmitButtonOffsetOn('#values');
+    return _this;
+  }
+
+  _createClass(_default, [{
+    key: "addOptionRow",
+    value: function addOptionRow(_ref) {
+      var valueId = _ref.valueId,
+          _ref$value = _ref.value,
+          value = _ref$value === void 0 ? {
+        label: '',
+        price: '',
+        price_type: 'fixed'
+      } : _ref$value;
+      var template = this.getRowTemplate({
+        optionId: undefined,
+        valueId: valueId,
+        value: value
+      });
+      var selectValues = $('#select-values').append(template);
+
+      _get(_getPrototypeOf(_default.prototype), "initOptionRow", this).call(this, template, selectValues);
+    }
+  }, {
+    key: "addOptionRowEventListener",
+    value: function addOptionRowEventListener() {
+      var _this2 = this;
+
+      $('#add-new-row').on('click', function () {
+        var valueId = $('#option-values .option-row').length;
+
+        _this2.addOptionRow({
+          valueId: valueId
+        });
+      });
+    }
+  }, {
+    key: "getOptionValuesElement",
+    value: function getOptionValuesElement() {
+      return $('#option-values');
+    }
+  }, {
+    key: "getAddNewRowButton",
+    value: function getAddNewRowButton() {
+      return $('#add-new-row');
+    }
+  }, {
+    key: "getInputFieldForErrorKey",
+    value: function getInputFieldForErrorKey(key) {
+      var keyParts = key.split('.'); // Replace all "_" to "-".
+
+      keyParts = keyParts.map(function (k) {
+        return k.split('_').join('-');
+      });
+      return $("#".concat(keyParts.join('-')));
+    }
+  }]);
+
+  return _default;
+}(_BaseOption__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./Modules/Option/Resources/assets/admin/js/ProductOption.js":
+/*!*******************************************************************!*\
+  !*** ./Modules/Option/Resources/assets/admin/js/ProductOption.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var _BaseOption__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BaseOption */ "./Modules/Option/Resources/assets/admin/js/BaseOption.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } Object.defineProperty(subClass, "prototype", { value: Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }), writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
+
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var _default = /*#__PURE__*/function (_BaseOption) {
+  _inherits(_default, _BaseOption);
+
+  var _super = _createSuper(_default);
+
+  function _default() {
+    var _thisSuper, _this;
+
+    _classCallCheck(this, _default);
+
+    _this = _super.call(this);
+    _this.optionsCount = 0;
+
+    _this.addOptions(FleetCart.data['product.options']);
+
+    if (_this.optionsCount === 0) {
+      _this.addOption();
+    }
+
+    if (_this.optionsCount > 3) {
+      _this.collapseOptions();
+    }
+
+    _get((_thisSuper = _assertThisInitialized(_this), _getPrototypeOf(_default.prototype)), "addOptionsErrors", _thisSuper).call(_thisSuper, FleetCart.errors['product.options']);
+
+    $('#add-new-option').on('click', function () {
+      return _this.addOption();
+    });
+    $('#add-global-option').on('click', function () {
+      return _this.addGlobalOption();
+    });
+    return _this;
+  }
+
+  _createClass(_default, [{
+    key: "addOptions",
+    value: function addOptions(options) {
+      var _iterator = _createForOfIteratorHelper(options),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var option = _step.value;
+          this.addOption(option);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    }
+  }, {
+    key: "collapseOptions",
+    value: function collapseOptions() {
+      var options = $('.option:not(.option-has-errors)');
+
+      var _iterator2 = _createForOfIteratorHelper(options),
+          _step2;
+
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var option = _step2.value;
+          $(option).find('[data-toggle=collapse]').trigger('click');
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+    }
+  }, {
+    key: "addGlobalOption",
+    value: function addGlobalOption() {
+      var _this2 = this;
+
+      var globalOptionId = $('#global-option').val();
+
+      if (globalOptionId === '') {
+        return window.admin.stopButtonLoading($('#add-global-option'));
+      }
+
+      $.ajax({
+        type: 'GET',
+        url: route('admin.options.show', globalOptionId),
+        dataType: 'json',
+        success: function success(option) {
+          _this2.addOption(option);
+
+          window.admin.stopButtonLoading($('#add-global-option'));
+        }
+      });
+    }
+  }, {
+    key: "addOption",
+    value: function addOption() {
+      var option = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+        id: null,
+        name: null,
+        type: null,
+        is_required: false,
+        values: []
+      };
+      // Cast "is_required" field to boolean.
+      option.is_required = !!JSON.parse(option.is_required);
+      var optionId = this.optionsCount;
+
+      var template = _.template($('#option-template').html());
+
+      var html = $(template({
+        option: option,
+        optionId: optionId
+      }));
+
+      if (option.name !== null) {
+        setTimeout(function () {
+          $("#option-".concat(optionId)).find('#option-name').text(option.name);
+        });
+      }
+
+      var optionGroup = $('#options-group').append(html);
+
+      if (!optionGroup.is('.sortable')) {
+        _get(_getPrototypeOf(_default.prototype), "makeSortable", this).call(this, optionGroup[0]);
+
+        optionGroup.addClass('sortable');
+      }
+
+      this.deleteOptionEventListener(html);
+      this.updateOptionNameEventListener(optionId);
+      this.updateTemplateEventListener(optionId, option['values']);
+      window.admin.tooltip();
+      this.optionsCount++;
+    }
+  }, {
+    key: "deleteOptionEventListener",
+    value: function deleteOptionEventListener(option) {
+      option.find('.delete-option').on('click', function (e) {
+        return $(e.currentTarget).closest('.option').remove();
+      });
+    }
+  }, {
+    key: "updateOptionNameEventListener",
+    value: function updateOptionNameEventListener(optionId) {
+      var option = $("#option-".concat(optionId));
+      var old = option.find('#option-name').text();
+      $(option).find('.option-name-field').on('input', function (e) {
+        var name = e.currentTarget.value !== '' ? e.currentTarget.value : old;
+        option.find('#option-name').text(name);
+      });
+    }
+  }, {
+    key: "updateTemplateEventListener",
+    value: function updateTemplateEventListener(optionId) {
+      var _this3 = this;
+
+      var values = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+      var optionTypeElement = $("#option-".concat(optionId, "-type"));
+      optionTypeElement.on('change', function (e) {
+        var type = e.currentTarget.value;
+
+        if (type === '') {
+          return _this3.getOptionValuesElement(optionId).html('');
+        }
+
+        _get(_getPrototypeOf(_default.prototype), "changeOptionType", _this3).call(_this3, {
+          optionId: optionId,
+          type: type,
+          values: values
+        });
+      }); // Trigger the "change" event on option type after attaching the listener
+      // this will automatically take effect of the current option which is
+      // maybe loaded from the old input values or from the product data.
+
+      optionTypeElement.trigger('change');
+    }
+  }, {
+    key: "addOptionRow",
+    value: function addOptionRow(_ref) {
+      var optionId = _ref.optionId,
+          valueId = _ref.valueId,
+          _ref$value = _ref.value,
+          value = _ref$value === void 0 ? {
+        label: '',
+        price: '',
+        price_type: 'fixed'
+      } : _ref$value;
+      var template = this.getRowTemplate({
+        optionId: optionId,
+        valueId: valueId,
+        value: value
+      });
+      var selectValues = $("#option-".concat(optionId, "-select-values")).append(template);
+
+      _get(_getPrototypeOf(_default.prototype), "initOptionRow", this).call(this, template, selectValues);
+    }
+  }, {
+    key: "addOptionRowEventListener",
+    value: function addOptionRowEventListener(optionId) {
+      var _this4 = this;
+
+      $("#option-".concat(optionId, "-add-new-row")).on('click', function () {
+        var valueId = $("#option-".concat(optionId, "-values .option-row")).length;
+
+        _this4.addOptionRow({
+          optionId: optionId,
+          valueId: valueId
+        });
+      });
+    }
+  }, {
+    key: "getOptionValuesElement",
+    value: function getOptionValuesElement(optionId) {
+      return $("#option-".concat(optionId, "-values"));
+    }
+  }, {
+    key: "getAddNewRowButton",
+    value: function getAddNewRowButton(optionId) {
+      return $("#option-".concat(optionId, "-add-new-row"));
+    }
+  }, {
+    key: "getInputFieldForErrorKey",
+    value: function getInputFieldForErrorKey(key) {
+      var keyParts = key.split('.'); // Remove the first element which is "option".
+
+      keyParts.shift(); // Replace all "_" to "-".
+
+      keyParts = keyParts.map(function (k) {
+        return k.split('_').join('-');
+      });
+      return $("#option-".concat(keyParts.join('-')));
+    }
+  }]);
+
+  return _default;
+}(_BaseOption__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+/***/ }),
+
+/***/ "./Modules/Option/Resources/assets/admin/js/main.js":
+/*!**********************************************************!*\
+  !*** ./Modules/Option/Resources/assets/admin/js/main.js ***!
+  \**********************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Option__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Option */ "./Modules/Option/Resources/assets/admin/js/Option.js");
+/* harmony import */ var _ProductOption__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductOption */ "./Modules/Option/Resources/assets/admin/js/ProductOption.js");
+
+
+
+if ($('#option-create-form, #option-edit-form').length !== 0) {
+  new _Option__WEBPACK_IMPORTED_MODULE_0__["default"]();
+}
+
+if ($('#product-create-form, #product-edit-form').length !== 0) {
+  new _ProductOption__WEBPACK_IMPORTED_MODULE_1__["default"]();
+}
+
+/***/ }),
+
+/***/ 10:
+/*!****************************************************************!*\
+  !*** multi ./Modules/Option/Resources/assets/admin/js/main.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! C:\laragon\www\ecommerce_full\Modules\Option\Resources\assets\admin\js\main.js */"./Modules/Option/Resources/assets/admin/js/main.js");
+
+
+/***/ })
+
+/******/ });
