@@ -7,8 +7,10 @@
         <div>
             <section class="shopping-cart-wrap">
                 <div class="container">
-                    @include('public.cart.index.steps')
-
+                    {{-- @include('public.cart.index.steps') --}}
+                    <div class="text-bg">
+                        <h2 class="text-center">Shopping Cart</h2>
+                    </div>
                     <div class="shopping-cart">
                         <div class="shopping-cart-inner" v-if="cartIsNotEmpty">
                             @include('public.cart.index.cart_items')
