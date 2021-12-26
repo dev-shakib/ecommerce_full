@@ -16,9 +16,8 @@
                 <h2 class="title">Explore Popular Categories</h2> <span class="excerpt"></span>
             </div>
             <ul class="tabs featured-categories-tabs">
-                
                 <?php $__currentLoopData = $featuredCategories['categories']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                   <a href="<?php echo e('/categories/'.$item['slug'].'/products'); ?>">
+                   <a href="<?php echo e('/categories/'.$item['slug'].'/products'); ?>" class="nav-links">
                     <li class="tab-item">
                         <div class="featured-category-image"><img
                                 src="<?php echo e($item['logo']['path']); ?>"
@@ -28,16 +27,9 @@
                     </li>
                    </a>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
             </ul>
         </div>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
 </section>
 <?php endif; ?>
 

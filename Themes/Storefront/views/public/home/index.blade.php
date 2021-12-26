@@ -19,7 +19,7 @@
             </div>
             <ul class="tabs featured-categories-tabs">
                 @foreach ($featuredCategories['categories'] as $item)
-                   <a href="{{ '/categories/'.$item['slug'].'/products' }}">
+                   <a href="{{ '/categories/'.$item['slug'].'/products' }}" class="nav-links">
                     <li class="tab-item">
                         <div class="featured-category-image"><img
                                 src="{{ $item['logo']['path'] }}"
@@ -32,12 +32,6 @@
             </ul>
         </div>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
 </section>
 @endif
 
