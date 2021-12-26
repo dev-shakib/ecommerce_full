@@ -68,6 +68,7 @@ class HomePageComposer
                 return [
                     'name' => $category->name,
                     'logo' => $category->logo,
+                    'slug' => $category->slug
                 ];
             });
     }
