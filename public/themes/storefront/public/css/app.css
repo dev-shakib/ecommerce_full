@@ -19866,6 +19866,8 @@ strong {
     border-radius: 2px;
 }
 .container {
+    max-width: 1420px;
+    width: 100%;
     padding-left: 4.5%;
     padding-right: 4.5%;
 }
@@ -19883,7 +19885,8 @@ strong {
 }
 @media screen and (max-width: 1920px) {
     .container {
-        /* max-width: 100%; */
+        max-width: 1420px;
+        width: 100%;
         padding-left: 4%;
         padding-right: 4%;
     }
