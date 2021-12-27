@@ -26585,6 +26585,7 @@ textarea.form-control {
 	padding-top: 50px;
 	padding-bottom: 40px;
 	background: var(--white);
+    margin-top: 3px;
 }
 .shopping-cart-wrap .empty-message {
     display: -webkit-box;
@@ -27515,7 +27516,8 @@ textarea.form-control {
 }
 .navigation-wrap {
 	background: var(--white);
-    padding-top: 10px;
+	padding-top: 10px;
+	box-shadow: 0px 1px 1px #e3e3e3;
 }
 .vertical-products-slide.slick-slide.slick-current.slick-active {
 	background: var(--white);
