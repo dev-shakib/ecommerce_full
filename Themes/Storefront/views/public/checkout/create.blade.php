@@ -14,7 +14,7 @@
 
                 {{-- @include('public.cart.index.steps') --}}
                 <div class="text-bg">
-                    <h2 class="text-center">Shopping Cart</h2>
+                    <h2 class="text-center">Checkout</h2>
                 </div>
 
                 <form @submit.prevent="placeOrder" @input="errors.clear($event.target.name)">
