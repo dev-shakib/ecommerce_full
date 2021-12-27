@@ -5233,3 +5233,11 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "}
+[2021-12-27 09:52:52] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 
+[2021-12-27 09:52:52] local.ERROR: Declaration of Doctrine\DBAL\Driver\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of Doctrine\\DBAL\\Driver\\PDOConnection::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs) at C:\\laragon\\www\\files\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:73)
+[stacktrace]
+#0 {main}
+"} 

@@ -21574,6 +21574,8 @@ textarea.form-control {
     margin: 14px auto -9px;
     -webkit-box-pack: center;
     justify-content: center;
+    position: absolute;
+    margin-top: 3px;
 }
 .header-search .searched-keywords > label {
     font-size: 14px;
@@ -25326,11 +25328,11 @@ textarea.form-control {
 .search-result-bottom {
     display: -webkit-box;
     display: flex;
-    margin: 17px 0 -15px;
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
+    padding: 12px 0;
 }
 .search-result-bottom .showing-results {
     line-height: 39px;
@@ -25478,9 +25480,7 @@ textarea.form-control {
     }
 }
 .list-view-products {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     margin: 0 -15px;
 }
 .list-product-card {
@@ -25488,7 +25488,6 @@ textarea.form-control {
     display: flex;
     -webkit-box-flex: 0;
     flex: 0 0 50%;
-    max-width: 50%;
     padding: 0 15px;
     margin-bottom: 30px;
 }
@@ -27513,4 +27512,41 @@ textarea.form-control {
 .text-bg .text-center {
 	font-weight: 400;
 	font-size: 38px;
+}
+.product-card-right .product-name p {
+    position: absolute;
+    margin-top: 50px;
+    width: 567px;
+    color: var(--gray);
+    cursor: default;
+}
+
+@media (max-width: 991px) {
+    .list-product-card-inner .product-card-right {
+        align-items: flex-start;
+    }
+    .list-product-card-inner .product-name > h6 {
+        position: inherit;
+    }
+    .product-card-right .product-name p {
+        position: inherit;
+        margin: 8px 0;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1070px) {
+    .product-card-right .product-name p {
+        width: 32%;
+    }
+}
+@media (min-width: 1071px) and (max-width: 1199px) {
+    .product-card-right .product-name p {
+        width: 32%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+    .product-card-right .product-name p {
+        width: 50%;
+    }
 }
