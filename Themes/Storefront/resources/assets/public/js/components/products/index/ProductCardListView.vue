@@ -24,9 +24,10 @@
             <div class="product-card-right">
                 <a :href="productUrl" class="product-name">
                     <h6>{{ product.name }}</h6>
+                <p style="display:none">{{getShortDes(product.id)}}</p>
+                <p>{{short_des}}</p>
                 </a>
 
-                <p>{{product.description}}</p>
 
                 <div class="clearfix"></div>
 
@@ -81,7 +82,7 @@
 <script>
     import ProductRating from './../../ProductRating.vue';
     import ProductCardMixin from '../../../mixins/ProductCardMixin';
-
+    import axios from 'axios';
     export default {
         components: { ProductRating },
 
@@ -90,5 +91,19 @@
         ],
 
         props: ['product'],
+
+        data() {
+            return {
+                short_des: 'loading..'
+            }
+        },
+
+        methods: {
+             getShortDes: async function(id){
+                await axios.post('/product/shot_des', {id: id}).then(data => {
+                    this.short_des = data.data;
+                })
+            }
+        },
     };
 </script>
