@@ -20416,7 +20416,6 @@ p {
     font-weight: 500;
     color: #fff;
 }
-.btn-primary,
 .btn-primary:focus {
     background: transparent;
 }
@@ -27633,4 +27632,21 @@ textarea.form-control {
 }
 .review-form .form-control {
 	border-color: #dadada;
+}
+.btn.btn-primary.btn-proceed-to-checkout {
+	background: var(--color_1);
+}
+.btn.btn-primary.btn-place-order:hover {
+	color: var(--white);
+}
+@media (max-width: 1100px) {
+    .features-wrap .single-feature:first-child {
+        padding-left: 30px;
+    }
+    .features-wrap .single-feature:last-child {
+        padding-right: 30px;
+    }
+}
+.order-summary-bottom .btn-primary {
+	color: var(--white);
 }
