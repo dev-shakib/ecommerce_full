@@ -20569,9 +20569,9 @@ p {
     transform: translateX(-50%);
 }
 .breadcrumb {
-    margin: 23px 0 0;
-    padding: 0;
-    background: #fff;
+	margin: 2px 0 0;
+	background: #fff;
+	padding-top: 22px;
 }
 .breadcrumb ul {
     margin-left: -11px;
@@ -25601,6 +25601,7 @@ textarea.form-control {
     -webkit-box-orient: vertical;
     position: absolute;
     margin-top: 10px;
+    max-width: 50%;
 }
 .list-product-card-inner .product-rating {
     margin-bottom: 14px;
@@ -26562,6 +26563,7 @@ textarea.form-control {
 .product-details-wrap, .shopping-cart-wrap {
 	padding-bottom: 40px;
 	background: var(--white);
+    padding-top: 35px;
 }
 .shopping-cart-wrap .empty-message {
     display: -webkit-box;
@@ -27521,7 +27523,7 @@ textarea.form-control {
 }
 .product-card-right .product-name p {
     position: absolute;
-    margin-top: 50px;
+    margin-top: 70px;
     width: 567px;
     color: var(--gray);
     cursor: default;
