@@ -27681,3 +27681,10 @@ textarea.form-control {
 .order-summary-bottom .btn:hover {
     color: var(--white);
 }
+.btn-proceed-to-checkout {
+	background: transparent;
+}
+.shopping-cart-wrap {
+	padding-top: 0;
+	margin-top: 2px;
+}
