@@ -45903,6 +45903,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -46865,7 +46867,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   props: ['product'],
   data: function data() {
     return {
-      short_des: 'data'
+      short_des: 'loading..'
     };
   },
   methods: {
@@ -48692,6 +48694,8 @@ var render = function () {
       "div",
       { staticClass: "container" },
       [
+        _c("h5", { staticClass: "lskit-title" }, [_vm._v("Best Deals")]),
+        _vm._v(" "),
         _c("div", { staticClass: "tab-products-header clearfix" }, [
           _c(
             "ul",

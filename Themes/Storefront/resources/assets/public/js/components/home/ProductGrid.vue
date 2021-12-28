@@ -1,6 +1,8 @@
 <template>
     <section class="grid-products-wrap clearfix">
         <div class="container">
+
+            <h5 class="lskit-title">Best Deals</h5>
             <div class="tab-products-header clearfix">
                 <ul class="tabs float-left">
                     <li

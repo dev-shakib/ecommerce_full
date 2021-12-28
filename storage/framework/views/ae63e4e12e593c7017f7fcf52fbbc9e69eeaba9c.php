@@ -52,7 +52,6 @@
 <banner-one-column :banner="<?php echo e(json_encode($oneColumnBanner)); ?>"></banner-one-column>
 <?php endif; ?>
 
-<h2 class="lskit-title">Best Deals</h2>
 <?php if(setting('storefront_product_grid_section_enabled')): ?>
 <product-grid :data="<?php echo e(json_encode($productGrid)); ?>"></product-grid>
 <?php endif; ?>
