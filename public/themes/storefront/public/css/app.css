@@ -22395,7 +22395,7 @@ textarea.form-control {
 .vertical-megamenu {
     position: static;
     max-height: 472px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .vertical-megamenu > li.hide {
     display: none;
@@ -27510,7 +27510,6 @@ textarea.form-control {
 }
 .category-nav-inner + .category-dropdown {
 	height: 408px !important;
-	overflow: hidden;
 	box-shadow: 0px 0px 3px #e3e3e3;
 }
 .text-bg {
