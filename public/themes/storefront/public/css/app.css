@@ -20106,6 +20106,7 @@ p {
     z-index: 1;
     -webkit-transition: 0.15s ease-in-out;
     transition: 0.15s ease-in-out;
+    z-index: 999;
 }
 .mega-menu .dropdown > .sub-menu > li > a {
     font-size: 14px;
@@ -22529,7 +22530,7 @@ textarea.form-control {
 }
 .horizontal-megamenu > .nav-item > .nav-link > i {
     position: absolute;
-    top: 50%;
+    top: 46%;
     right: 15px;
     color: #6e6e6e;
     -webkit-transform: translateY(-50%) rotate(90deg);
@@ -27687,4 +27688,10 @@ textarea.form-control {
 .shopping-cart-wrap {
 	padding-top: 0;
 	margin-top: 2px;
+}
+.btn-place-order {
+    background: transparent;
+}
+.product-details-top-inner .slick-list {
+	height: max-content !important;
 }
