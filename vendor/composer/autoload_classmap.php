@@ -3803,6 +3803,7 @@ return array(
     'Modules\\Category\\Entities\\CategoryTranslation' => $baseDir . '/Modules/Category/Entities/CategoryTranslation.php',
     'Modules\\Category\\Http\\Controllers\\Admin\\CategoryController' => $baseDir . '/Modules/Category/Http/Controllers/Admin/CategoryController.php',
     'Modules\\Category\\Http\\Controllers\\Admin\\CategoryTreeController' => $baseDir . '/Modules/Category/Http/Controllers/Admin/CategoryTreeController.php',
+    'Modules\\Category\\Http\\Controllers\\Api\\CategoryApiController' => $baseDir . '/Modules/Category/Http/Controllers/Api/CategoryApiController.php',
     'Modules\\Category\\Http\\Controllers\\CategoryController' => $baseDir . '/Modules/Category/Http/Controllers/CategoryController.php',
     'Modules\\Category\\Http\\Controllers\\CategoryProductController' => $baseDir . '/Modules/Category/Http/Controllers/CategoryProductController.php',
     'Modules\\Category\\Http\\Requests\\SaveCategoryRequest' => $baseDir . '/Modules/Category/Http/Requests/SaveCategoryRequest.php',
