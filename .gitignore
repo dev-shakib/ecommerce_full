@@ -12,4 +12,4 @@ yarn-error.log
 *.map
 .env
 .env.local
-laravel.log
+storage/logs/laravel.log
