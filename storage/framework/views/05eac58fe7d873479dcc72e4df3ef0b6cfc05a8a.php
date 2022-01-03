@@ -1,17 +1,5 @@
 <footer class="footer-wrap">
     <div class="container">
-        <div class="row justify-content-between py-4 lskit-newsletter">
-            <div class="col-md-6">
-                <h3 class="text-white">Join Our Newsletter</h3>
-                <p class="text-white">Subcribe to get information about products and coupons</p>
-            </div>
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Entery your email address">
-                    <button class="btn btn-success" type="button" id="button-addon2">Subscribe</button>
-                </div>
-            </div>
-        </div>
 
         <div class="footer">
             <div class="footer-top">
