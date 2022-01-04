@@ -18991,3 +18991,213 @@ Did you mean this?
 #71 C:\\laragon\\www\\ecommerce_full\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #72 {main}
 "} 
+[2022-01-04 06:30:21] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:30:21] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:30:21] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:30:21] local.ERROR: Uncaught ReflectionException: Class translator does not exist in C:\laragon\www\ecommerce_full\vendor\laravel\framework\src\Illuminate\Container\Container.php:805
+Stack trace:
+#0 C:\laragon\www\ecommerce_full\vendor\laravel\framework\src\Illuminate\Container\Container.php(805): ReflectionClass->__construct('translator')
+#1 C:\laragon\www\ecommerce_full\vendor\laravel\framework\src\Illuminate\Container\Container.php(687): Illuminate\Container\Container->build('translator')
+#2 C:\laragon\www\ecommerce_full\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(796): Illuminate\Container\Container->resolve('translator', Array, true)
+#3 C:\laragon\www\ecommerce_full\vendor\laravel\framework\src\Illuminate\Container\Container.php(633): Illuminate\Foundation\Application->resolve('translator', Array)
+#4 C:\laragon\www\ecommerce_full\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(781): Illuminate\Container\Container->make('translator', Array)
+#5 C:\laragon\www\ecommerce_full\vendor\lar {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught ReflectionException: Class translator does not exist in C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:805
+Stack trace:
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(805): ReflectionClass->__construct('translator')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('translator')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('translator', Array, true)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('translator', Array)
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('translator', Array)
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\lar at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:807)
+[stacktrace]
+#0 {main}
+"} 
+[2022-01-04 06:30:21] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:30:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:30:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:31:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:31:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:32:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:32:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:33:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:33:23] local.ERROR: Class 'Laravel\Sanctum\SanctumServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Laravel\\Sanctum\\SanctumServiceProvider' not found at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php:690)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(624): Illuminate\\Foundation\\Application->resolveProvider('Laravel\\\\Sanctum...')
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Laravel\\\\Sanctum...')
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(604): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(230): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2022-01-04 06:42:12] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(156): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(140): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#19 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(109): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#20 C:\\laragon\\www\\ecommerce_full\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#21 {main}
+"} 
+[2022-01-04 06:42:12] production.ERROR: No application encryption key has been specified. {"exception":"[object] (RuntimeException(code: 0): No application encryption key has been specified. at C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php:80)
+[stacktrace]
+#0 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(433): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(NULL)
+#1 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(84): tap(NULL, Object(Closure))
+#2 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(61): Illuminate\\Encryption\\EncryptionServiceProvider->key(Array)
+#3 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Encryption\\EncryptionServiceProvider.php(33): Illuminate\\Encryption\\EncryptionServiceProvider->parseKey(Array)
+#4 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(801): Illuminate\\Encryption\\EncryptionServiceProvider->Illuminate\\Encryption\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#5 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build(Object(Closure))
+#6 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('encrypter', Array, true)
+#7 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('encrypter', Array)
+#8 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('encrypter', Array)
+#9 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(955): Illuminate\\Foundation\\Application->make('encrypter')
+#10 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(875): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#11 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(836): Illuminate\\Container\\Container->resolveDependencies(Array)
+#12 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(687): Illuminate\\Container\\Container->build('FleetCart\\\\Http\\\\...')
+#13 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(796): Illuminate\\Container\\Container->resolve('FleetCart\\\\Http\\\\...', Array, true)
+#14 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(633): Illuminate\\Foundation\\Application->resolve('FleetCart\\\\Http\\\\...', Array)
+#15 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(781): Illuminate\\Container\\Container->make('FleetCart\\\\Http\\\\...', Array)
+#16 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(204): Illuminate\\Foundation\\Application->make('FleetCart\\\\Http\\\\...')
+#17 C:\\laragon\\www\\ecommerce_full\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(178): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#18 C:\\laragon\\www\\ecommerce_full\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#19 {main}
+"} 

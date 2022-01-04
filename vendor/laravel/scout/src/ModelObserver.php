@@ -3,15 +3,33 @@
 namespace Laravel\Scout;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Config;
 
 class ModelObserver
 {
+    /**
+     * Indicates if Scout will dispatch the observer's events after all database transactions have committed.
+     *
+     * @var bool
+     */
+    public $afterCommit;
+
     /**
      * The class names that syncing is disabled for.
      *
      * @var array
      */
     protected static $syncingDisabledFor = [];
+
+    /**
+     * Create a new observer instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->afterCommit = Config::get('scout.after_commit', false);
+    }
 
     /**
      * Enable syncing for the given class.

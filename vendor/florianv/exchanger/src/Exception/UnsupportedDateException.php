@@ -48,11 +48,12 @@ final class UnsupportedDateException extends Exception
             sprintf(
                 'The date "%s" is not supported by the service "%s".',
                 $date->format('Y-m-d'),
-                get_class($service)
+                \get_class($service)
             )
         );
 
         $this->service = $service;
+        $this->date = $date;
     }
 
     /**

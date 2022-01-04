@@ -8,12 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Carbon;
 
 use Carbon\Exceptions\InvalidCastException;
 use Carbon\Exceptions\InvalidTimeZoneException;
 use DateTimeInterface;
 use DateTimeZone;
+use Throwable;
 
 class CarbonTimeZone extends DateTimeZone
 {
@@ -33,11 +35,11 @@ class CarbonTimeZone extends DateTimeZone
 
     protected static function getDateTimeZoneNameFromMixed($timezone)
     {
-        if (is_null($timezone)) {
+        if ($timezone === null) {
             return date_default_timezone_get();
         }
 
-        if (is_string($timezone)) {
+        if (\is_string($timezone)) {
             $timezone = preg_replace('/^\s*([+-]\d+)(\d{2})\s*$/', '$1:$2', $timezone);
         }
 
@@ -173,14 +175,15 @@ class CarbonTimeZone extends DateTimeZone
     }
 
     /**
-     * Returns the first region string (such as "America/Toronto") that matches the current timezone.
+     * Returns the first region string (such as "America/Toronto") that matches the current timezone or
+     * false if no match is found.
      *
      * @see timezone_name_from_abbr native PHP function.
      *
      * @param DateTimeInterface|null $date
      * @param int                    $isDst
      *
-     * @return string
+     * @return string|false
      */
     public function toRegionName(DateTimeInterface $date = null, $isDst = 1)
     {
@@ -191,16 +194,30 @@ class CarbonTimeZone extends DateTimeZone
             return $name;
         }
 
+        $date = $date ?: Carbon::now($this);
+
         // Integer construction no longer supported since PHP 8
         // @codeCoverageIgnoreStart
         try {
-            $offset = @$this->getOffset($date ?: Carbon::now($this)) ?: 0;
-        } catch (\Throwable $e) {
+            $offset = @$this->getOffset($date) ?: 0;
+        } catch (Throwable $e) {
             $offset = 0;
         }
         // @codeCoverageIgnoreEnd
 
-        return @timezone_name_from_abbr('', $offset, $isDst);
+        $name = @timezone_name_from_abbr('', $offset, $isDst);
+
+        if ($name) {
+            return $name;
+        }
+
+        foreach (timezone_identifiers_list() as $timezone) {
+            if (Carbon::instance($date)->tz($timezone)->getOffset() === $offset) {
+                return $timezone;
+            }
+        }
+
+        return false;
     }
 
     /**

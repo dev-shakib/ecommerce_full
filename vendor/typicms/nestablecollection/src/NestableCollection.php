@@ -9,22 +9,23 @@
 
 namespace TypiCMS;
 
-use App;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection as BaseCollection;
 
 class NestableCollection extends Collection
 {
-    private $total;
+    protected $total;
 
-    private $parentColumn;
+    protected $parentColumn;
 
-    private $removeItemsWithMissingAncestor = true;
+    protected $removeItemsWithMissingAncestor = true;
 
-    private $indentChars = '    ';
+    protected $indentChars = '    ';
 
-    private $childrenName = 'items';
+    protected $childrenName = 'items';
+
+    protected $parentRelation = 'parent';
 
     public function __construct($items = [])
     {
@@ -67,7 +68,7 @@ class NestableCollection extends Collection
         // Remove items with missing ancestor.
         if ($this->removeItemsWithMissingAncestor) {
             $collection = $this->reject(function ($item) use ($parentColumn) {
-                if ($item->$parentColumn) {
+                if ($item->{$parentColumn}) {
                     $missingAncestor = $this->anAncestorIsMissing($item);
 
                     return $missingAncestor;
@@ -76,9 +77,9 @@ class NestableCollection extends Collection
         }
 
         // Add items to children collection.
-        foreach ($collection->items as $key => $item) {
-            if ($item->$parentColumn && isset($collection[$item->$parentColumn])) {
-                $collection[$item->$parentColumn]->{$this->childrenName}->push($item);
+        foreach ($collection->items as $item) {
+            if ($item->{$parentColumn} && isset($collection[$item->{$parentColumn}])) {
+                $collection[$item->{$parentColumn}]->{$this->childrenName}->push($item);
                 $keysToDelete[] = $item->id;
             }
         }
@@ -93,11 +94,11 @@ class NestableCollection extends Collection
      * Recursive function that flatten a nested Collection
      * with characters (default is four spaces).
      *
-     * @param string             $column
-     * @param int                $level
-     * @param array              &$flattened
-     * @param string|null        $indentChars
-     * @param string|boolen|null $parent_string
+     * @param string           $column
+     * @param int              $level
+     * @param array            &$flattened
+     * @param null|string      $indentChars
+     * @param null|bool|string $parent_string
      *
      * @return array
      */
@@ -107,9 +108,9 @@ class NestableCollection extends Collection
         $indentChars = $indentChars ?: $this->indentChars;
         foreach ($collection as $item) {
             if ($parent_string) {
-                $item_string = ($parent_string === true) ? $item->$column : $parent_string.$indentChars.$item->$column;
+                $item_string = ($parent_string === true) ? $item->{$column} : $parent_string.$indentChars.$item->{$column};
             } else {
-                $item_string = str_repeat($indentChars, $level).$item->$column;
+                $item_string = str_repeat($indentChars, $level).$item->{$column};
             }
 
             $flattened[$item->id] = $item_string;
@@ -165,20 +166,20 @@ class NestableCollection extends Collection
     /**
      * Check if an ancestor is missing.
      *
-     * @param $item
+     * @param mixed $item
      *
      * @return bool
      */
     public function anAncestorIsMissing($item)
     {
         $parentColumn = $this->parentColumn;
-        if (!$item->$parentColumn) {
+        if (!$item->{$parentColumn}) {
             return false;
         }
-        if (!$this->has($item->$parentColumn)) {
+        if (!$this->has($item->{$parentColumn})) {
             return true;
         }
-        $parent = $this[$item->$parentColumn];
+        $parent = $this[$item->{$parentColumn}];
 
         return $this->anAncestorIsMissing($parent);
     }
@@ -201,5 +202,28 @@ class NestableCollection extends Collection
     public function getTotal()
     {
         return $this->total();
+    }
+
+    /**
+     * Sets the $item->parent relation for each item in the NestableCollection to be the parent it has in the collection
+     * so it can be used without querying the database.
+     *
+     * @return $this
+     */
+    public function setParents()
+    {
+        $this->setParentsRecursive($this);
+
+        return $this;
+    }
+
+    protected function setParentsRecursive(&$items, &$parent = null)
+    {
+        foreach ($items as $item) {
+            if ($parent) {
+                $item->setRelation($this->parentRelation, $parent);
+            }
+            $this->setParentsRecursive($item->{$this->childrenName}, $item);
+        }
     }
 }

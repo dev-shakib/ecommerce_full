@@ -17,14 +17,14 @@ class DotenvEditor
     /**
      * The IoC Container
      *
-     * @var \Illuminate\Container\Container
+     * @var \Illuminate\Contracts\Container\Container
      */
     protected $app;
 
     /**
      * Store instance of Config Repository;
      *
-     * @var \Illuminate\Config\Repository
+     * @var \Illuminate\Contracts\Config\Repository
      */
     protected $config;
 
@@ -175,7 +175,6 @@ class DotenvEditor
     {
         if (! is_dir($this->backupPath)) {
             mkdir($this->backupPath, 0777, true);
-            copy(__DIR__ . '/../../stubs/gitignore.txt', $this->backupPath . '../.gitignore');
         }
     }
 

@@ -5,6 +5,7 @@ namespace Mcamara\LaravelLocalization;
 use Illuminate\Config\Repository;
 use Illuminate\Contracts\Routing\UrlRoutable;
 use Illuminate\Support\Str;
+use Illuminate\Support\Env;
 use Mcamara\LaravelLocalization\Exceptions\SupportedLocalesNotDefined;
 use Mcamara\LaravelLocalization\Exceptions\UnsupportedLocaleException;
 
@@ -760,7 +761,7 @@ class LaravelLocalization
             $routeName = $this->getURLFromRouteNameTranslated($locale, $translatedRoute, $attributes);
 
             // We can ignore extra url parts and compare only their url_path (ignore arguments that are not attributes)
-            if (parse_url($this->getNonLocalizedURL($routeName), PHP_URL_PATH) == parse_url($this->getNonLocalizedURL($url), PHP_URL_PATH)) {
+            if (parse_url($this->getNonLocalizedURL($routeName), PHP_URL_PATH) == parse_url($this->getNonLocalizedURL(urldecode($url)), PHP_URL_PATH)) {
                 $this->cachedTranslatedRoutesByUrl[$locale][$url] = $translatedRoute;
 
                 return $translatedRoute;
@@ -1036,12 +1037,22 @@ class LaravelLocalization
      */
     protected function getForcedLocale()
     {
-        return env(static::ENV_ROUTE_KEY, function () {
-            $value = getenv(static::ENV_ROUTE_KEY);
+        if (version_compare($this->app->version(), '6') >= 0) {
+            return Env::get(static::ENV_ROUTE_KEY, function () {
+                $value = getenv(static::ENV_ROUTE_KEY);
 
-            if ($value !== false) {
-                return $value;
-            }
-        });
+                if ($value !== false) {
+                    return $value;
+                }
+            });
+        } else {
+            return env(static::ENV_ROUTE_KEY, function () {
+                $value = getenv(static::ENV_ROUTE_KEY);
+
+                if ($value !== false) {
+                    return $value;
+                }
+            });
+        }
     }
 }

@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace Exchanger\Service;
 
 use Exchanger\Contract\ExchangeRateQuery;
-use Exchanger\Contract\HistoricalExchangeRateQuery;
 use Exchanger\Exception\Exception;
+use Exchanger\HistoricalExchangeRateQuery;
 use Exchanger\StringUtil;
 use Exchanger\Contract\ExchangeRate as ExchangeRateContract;
 
@@ -63,31 +63,11 @@ final class Cryptonator extends HttpService
     }
 
     /**
-     * Tells if the service supports the exchange rate query.
-     *
-     * @param ExchangeRateQuery $exchangeQuery
-     *
-     * @return bool
+     * {@inheritdoc}
      */
     public function supportQuery(ExchangeRateQuery $exchangeQuery): bool
     {
-        $currencyPair = $exchangeQuery->getCurrencyPair();
-
-        return !$exchangeQuery instanceof HistoricalExchangeRateQuery
-            && in_array($currencyPair->getBaseCurrency(), $this->getSupportedCodes())
-            && in_array($currencyPair->getQuoteCurrency(), $this->getSupportedCodes());
-    }
-
-    /**
-     * Array of codes supported according to.
-     *
-     * @url https://www.cryptonator.com/api/currencies
-     *
-     * @return array
-     */
-    private function getSupportedCodes(): array
-    {
-        return require __DIR__.'/resources/cryptonator-codes.php';
+        return !$exchangeQuery instanceof HistoricalExchangeRateQuery;
     }
 
     /**

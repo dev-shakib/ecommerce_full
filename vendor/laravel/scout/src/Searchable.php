@@ -113,20 +113,35 @@ trait Searchable
     /**
      * Make all instances of the model searchable.
      *
+     * @param  int  $chunk
      * @return void
      */
-    public static function makeAllSearchable()
+    public static function makeAllSearchable($chunk = null)
     {
         $self = new static;
 
         $softDelete = static::usesSoftDelete() && config('scout.soft_delete', false);
 
         $self->newQuery()
+            ->when(true, function ($query) use ($self) {
+                $self->makeAllSearchableUsing($query);
+            })
             ->when($softDelete, function ($query) {
                 $query->withTrashed();
             })
             ->orderBy($self->getKeyName())
-            ->searchable();
+            ->searchable($chunk);
+    }
+
+    /**
+     * Modify the query used to retrieve models when making all of the models searchable.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function makeAllSearchableUsing($query)
+    {
+        return $query;
     }
 
     /**

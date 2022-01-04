@@ -10,20 +10,27 @@
 This package contains a `once` function. You can pass a `callable` to it. Here's quick example:
 
 ```php
-class MyClass
-{
+$myClass = new class() {
     public function getNumber()
     {
         return once(function () {
             return rand(1, 10000);
         });
     }
-}
+};
 ```
 
-No matter how many times you run `(new MyClass())->getNumber()` inside the same request  you'll always get the same number.
+No matter how many times you run `$myClass->getNumber()` inside the same request  you'll always get the same number.
 
 Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+
+## Support us
+
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/once.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/once)
+
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -38,18 +45,17 @@ composer require spatie/once
 The `once` function accepts a `callable`.
 
 ```php
-class MyClass
-{
+$myClass = new class() {
     public function getNumber()
     {
         return once(function () {
             return rand(1, 10000);
         });
     }
-}
+};
 ```
 
-No matter how many times you run `(new MyClass())->getNumber()` you'll always get the same number.
+No matter how many times you run `$myClass->getNumber()` you'll always get the same number.
 
 The `once` function will only run once per combination of argument values the containing method receives.
 
@@ -146,27 +152,12 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
 
-## Postcardware
-
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
-
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
-
 ## Credits
 
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
 
 Credit for the idea of the `once` function goes to [Taylor Otwell](https://twitter.com/taylorotwell/status/794622206567444481). The code for this package is based upon the code he was kind enough to share with us.
-
-## Support us
-
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
-
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/spatie).
-All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 ## License
 

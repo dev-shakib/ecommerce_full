@@ -21,7 +21,8 @@
         "nwidart/laravel-modules": "^6.0",
         "swayok/alternative-laravel-cache": "^5.4",
         "symfony/intl": "^5.0",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "laravel/sanctum": "^2.12.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.0",

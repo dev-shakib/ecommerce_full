@@ -2,6 +2,7 @@
 
 namespace Laravel\Scout;
 
+use Illuminate\Container\Container;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Traits\Macroable;
@@ -27,7 +28,7 @@ class Builder
     /**
      * Optional callback before search execution.
      *
-     * @var string
+     * @var \Closure|null
      */
     public $callback;
 
@@ -71,7 +72,7 @@ class Builder
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  string  $query
-     * @param  \Closure  $callback
+     * @param  \Closure|null  $callback
      * @param  bool  $softDelete
      * @return void
      */
@@ -256,6 +257,43 @@ class Builder
      * @param  int  $perPage
      * @param  string  $pageName
      * @param  int|null  $page
+     * @return \Illuminate\Contracts\Pagination\Paginator
+     */
+    public function simplePaginate($perPage = null, $pageName = 'page', $page = null)
+    {
+        $engine = $this->engine();
+
+        $page = $page ?: Paginator::resolveCurrentPage($pageName);
+
+        $perPage = $perPage ?: $this->model->getPerPage();
+
+        $results = $this->model->newCollection($engine->map(
+            $this, $rawResults = $engine->paginate($this, $perPage, $page), $this->model
+        )->all());
+
+        $total = $engine->getTotalCount($rawResults);
+
+        $hasMorePages = ($perPage * $page) < $engine->getTotalCount($rawResults);
+
+        $paginator = Container::getInstance()->makeWith(Paginator::class, [
+            'items' => $results,
+            'perPage' => $perPage,
+            'currentPage' => $page,
+            'options' => [
+                'path' => Paginator::resolveCurrentPath(),
+                'pageName' => $pageName,
+            ],
+        ])->hasMorePagesWhen($hasMorePages);
+
+        return $paginator->appends('query', $this->query);
+    }
+
+    /**
+     * Paginate the given query into a paginator.
+     *
+     * @param  int  $perPage
+     * @param  string  $pageName
+     * @param  int|null  $page
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public function paginate($perPage = null, $pageName = 'page', $page = null)
@@ -270,10 +308,16 @@ class Builder
             $this, $rawResults = $engine->paginate($this, $perPage, $page), $this->model
         )->all());
 
-        $paginator = (new LengthAwarePaginator($results, $engine->getTotalCount($rawResults), $perPage, $page, [
-            'path' => Paginator::resolveCurrentPath(),
-            'pageName' => $pageName,
-        ]));
+        $paginator = Container::getInstance()->makeWith(LengthAwarePaginator::class, [
+            'items' => $results,
+            'total' => $engine->getTotalCount($rawResults),
+            'perPage' => $perPage,
+            'currentPage' => $page,
+            'options' => [
+                'path' => Paginator::resolveCurrentPath(),
+                'pageName' => $pageName,
+            ],
+        ]);
 
         return $paginator->appends('query', $this->query);
     }
@@ -296,10 +340,16 @@ class Builder
 
         $results = $engine->paginate($this, $perPage, $page);
 
-        $paginator = (new LengthAwarePaginator($results, $engine->getTotalCount($results), $perPage, $page, [
-            'path' => Paginator::resolveCurrentPath(),
-            'pageName' => $pageName,
-        ]));
+        $paginator = Container::getInstance()->makeWith(LengthAwarePaginator::class, [
+            'items' => $results,
+            'total' => $engine->getTotalCount($results),
+            'perPage' => $perPage,
+            'currentPage' => $page,
+            'options' => [
+                'path' => Paginator::resolveCurrentPath(),
+                'pageName' => $pageName,
+            ],
+        ]);
 
         return $paginator->appends('query', $this->query);
     }

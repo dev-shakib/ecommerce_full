@@ -65,6 +65,13 @@ class Csv extends BaseWriter
     private $excelCompatibility = false;
 
     /**
+     * Output encoding.
+     *
+     * @var string
+     */
+    private $outputEncoding = '';
+
+    /**
      * Create a new CSV.
      *
      * @param Spreadsheet $spreadsheet Spreadsheet object
@@ -77,10 +84,12 @@ class Csv extends BaseWriter
     /**
      * Save PhpSpreadsheet to file.
      *
-     * @param resource|string $pFilename
+     * @param resource|string $filename
      */
-    public function save($pFilename): void
+    public function save($filename, int $flags = 0): void
     {
+        $this->processFlags($flags);
+
         // Fetch sheet
         $sheet = $this->spreadsheet->getSheet($this->sheetIndex);
 
@@ -90,7 +99,7 @@ class Csv extends BaseWriter
         Calculation::setArrayReturnType(Calculation::RETURN_ARRAY_AS_VALUE);
 
         // Open file
-        $this->openFileHandle($pFilename);
+        $this->openFileHandle($filename);
 
         if ($this->excelCompatibility) {
             $this->setUseBOM(true); //  Enforce UTF-8 BOM Header
@@ -168,9 +177,9 @@ class Csv extends BaseWriter
      *
      * @return $this
      */
-    public function setEnclosure($pValue)
+    public function setEnclosure($pValue = '"')
     {
-        $this->enclosure = $pValue ? $pValue : '"';
+        $this->enclosure = $pValue;
 
         return $this;
     }
@@ -297,6 +306,59 @@ class Csv extends BaseWriter
     }
 
     /**
+     * Get output encoding.
+     *
+     * @return string
+     */
+    public function getOutputEncoding()
+    {
+        return $this->outputEncoding;
+    }
+
+    /**
+     * Set output encoding.
+     *
+     * @param string $pValue Output encoding
+     *
+     * @return $this
+     */
+    public function setOutputEncoding($pValue)
+    {
+        $this->outputEncoding = $pValue;
+
+        return $this;
+    }
+
+    /** @var bool */
+    private $enclosureRequired = true;
+
+    public function setEnclosureRequired(bool $value): self
+    {
+        $this->enclosureRequired = $value;
+
+        return $this;
+    }
+
+    public function getEnclosureRequired(): bool
+    {
+        return $this->enclosureRequired;
+    }
+
+    /**
+     * Convert boolean to TRUE/FALSE; otherwise return element cast to string.
+     *
+     * @param mixed $element
+     */
+    private static function elementToString($element): string
+    {
+        if (is_bool($element)) {
+            return $element ? 'TRUE' : 'FALSE';
+        }
+
+        return (string) $element;
+    }
+
+    /**
      * Write line to CSV file.
      *
      * @param resource $pFileHandle PHP filehandle
@@ -305,30 +367,38 @@ class Csv extends BaseWriter
     private function writeLine($pFileHandle, array $pValues): void
     {
         // No leading delimiter
-        $writeDelimiter = false;
+        $delimiter = '';
 
         // Build the line
         $line = '';
 
         foreach ($pValues as $element) {
-            // Escape enclosures
-            $element = str_replace($this->enclosure, $this->enclosure . $this->enclosure, $element);
-
+            $element = self::elementToString($element);
             // Add delimiter
-            if ($writeDelimiter) {
-                $line .= $this->delimiter;
-            } else {
-                $writeDelimiter = true;
+            $line .= $delimiter;
+            $delimiter = $this->delimiter;
+            // Escape enclosures
+            $enclosure = $this->enclosure;
+            if ($enclosure) {
+                // If enclosure is not required, use enclosure only if
+                // element contains newline, delimiter, or enclosure.
+                if (!$this->enclosureRequired && strpbrk($element, "$delimiter$enclosure\n") === false) {
+                    $enclosure = '';
+                } else {
+                    $element = str_replace($enclosure, $enclosure . $enclosure, $element);
+                }
             }
-
             // Add enclosed string
-            $line .= $this->enclosure . $element . $this->enclosure;
+            $line .= $enclosure . $element . $enclosure;
         }
 
         // Add line ending
         $line .= $this->lineEnding;
 
         // Write to file
+        if ($this->outputEncoding != '') {
+            $line = mb_convert_encoding($line, $this->outputEncoding);
+        }
         fwrite($pFileHandle, $line);
     }
 }

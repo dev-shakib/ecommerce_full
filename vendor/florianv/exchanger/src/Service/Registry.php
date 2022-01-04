@@ -22,8 +22,6 @@ final class Registry
 {
     /**
      * Returns a map of all supports services.
-     *
-     * @return array
      */
     public static function getServices(): array
     {
@@ -47,6 +45,9 @@ final class Registry
             'xignite' => Xignite::class,
             'national_bank_of_ukraine' => NationalBankOfUkraine::class,
             'coin_layer' => CoinLayer::class,
+            'xchangeapi' => XchangeApi::class,
+            'fastforex' => FastForex::class,
+            'abstract_api' => AbstractApi::class,
         ];
     }
 }

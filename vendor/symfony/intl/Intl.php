@@ -22,32 +22,32 @@ final class Intl
      * The number of resource bundles to buffer. Loading the same resource
      * bundle for n locales takes up n spots in the buffer.
      */
-    const BUFFER_SIZE = 10;
+    public const BUFFER_SIZE = 10;
 
     /**
      * The directory name of the currency data.
      */
-    const CURRENCY_DIR = 'currencies';
+    public const CURRENCY_DIR = 'currencies';
 
     /**
      * The directory name of the language data.
      */
-    const LANGUAGE_DIR = 'languages';
+    public const LANGUAGE_DIR = 'languages';
 
     /**
      * The directory name of the script data.
      */
-    const SCRIPT_DIR = 'scripts';
+    public const SCRIPT_DIR = 'scripts';
 
     /**
      * The directory name of the locale data.
      */
-    const LOCALE_DIR = 'locales';
+    public const LOCALE_DIR = 'locales';
 
     /**
      * The directory name of the region data.
      */
-    const REGION_DIR = 'regions';
+    public const REGION_DIR = 'regions';
 
     /**
      * The directory name of the zone data.
@@ -66,18 +66,14 @@ final class Intl
 
     /**
      * Returns whether the intl extension is installed.
-     *
-     * @return bool Returns true if the intl extension is installed, false otherwise
      */
     public static function isExtensionLoaded(): bool
     {
-        return class_exists('\ResourceBundle');
+        return class_exists(\ResourceBundle::class);
     }
 
     /**
      * Returns the version of the installed ICU library.
-     *
-     * @return string|null The ICU version or NULL if it could not be determined
      */
     public static function getIcuVersion(): ?string
     {
@@ -85,7 +81,7 @@ final class Intl
             if (!self::isExtensionLoaded()) {
                 self::$icuVersion = self::getIcuStubVersion();
             } elseif (\defined('INTL_ICU_VERSION')) {
-                self::$icuVersion = INTL_ICU_VERSION;
+                self::$icuVersion = \INTL_ICU_VERSION;
             } else {
                 try {
                     $reflector = new \ReflectionExtension('intl');
@@ -106,8 +102,6 @@ final class Intl
 
     /**
      * Returns the version of the installed ICU data.
-     *
-     * @return string The version of the installed ICU data
      */
     public static function getIcuDataVersion(): string
     {
@@ -120,18 +114,14 @@ final class Intl
 
     /**
      * Returns the ICU version that the stub classes mimic.
-     *
-     * @return string The ICU version of the stub classes
      */
     public static function getIcuStubVersion(): string
     {
-        return '67.1';
+        return '70.1';
     }
 
     /**
      * Returns the absolute path to the data directory.
-     *
-     * @return string The absolute path to the data directory
      */
     public static function getDataDirectory(): string
     {
