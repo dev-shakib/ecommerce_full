@@ -5758,6 +5758,8 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'Modules\\User\\Http\\Controllers\\Admin\\RoleController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/Admin/RoleController.php',
         'Modules\\User\\Http\\Controllers\\Admin\\UserController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/Admin/UserController.php',
         'Modules\\User\\Http\\Controllers\\Admin\\UserResetPasswordController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/Admin/UserResetPasswordController.php',
+        'Modules\\User\\Http\\Controllers\\Api\\BaseApiController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/Api/BaseApiController.php',
+        'Modules\\User\\Http\\Controllers\\Api\\RegisterApiController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/Api/RegisterApiController.php',
         'Modules\\User\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/AuthController.php',
         'Modules\\User\\Http\\Controllers\\BaseAuthController' => __DIR__ . '/../..' . '/Modules/User/Http/Controllers/BaseAuthController.php',
         'Modules\\User\\Http\\Requests\\LoginRequest' => __DIR__ . '/../..' . '/Modules/User/Http/Requests/LoginRequest.php',

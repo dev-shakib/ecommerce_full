@@ -4776,6 +4776,8 @@ return array(
     'Modules\\User\\Http\\Controllers\\Admin\\RoleController' => $baseDir . '/Modules/User/Http/Controllers/Admin/RoleController.php',
     'Modules\\User\\Http\\Controllers\\Admin\\UserController' => $baseDir . '/Modules/User/Http/Controllers/Admin/UserController.php',
     'Modules\\User\\Http\\Controllers\\Admin\\UserResetPasswordController' => $baseDir . '/Modules/User/Http/Controllers/Admin/UserResetPasswordController.php',
+    'Modules\\User\\Http\\Controllers\\Api\\BaseApiController' => $baseDir . '/Modules/User/Http/Controllers/Api/BaseApiController.php',
+    'Modules\\User\\Http\\Controllers\\Api\\RegisterApiController' => $baseDir . '/Modules/User/Http/Controllers/Api/RegisterApiController.php',
     'Modules\\User\\Http\\Controllers\\AuthController' => $baseDir . '/Modules/User/Http/Controllers/AuthController.php',
     'Modules\\User\\Http\\Controllers\\BaseAuthController' => $baseDir . '/Modules/User/Http/Controllers/BaseAuthController.php',
     'Modules\\User\\Http\\Requests\\LoginRequest' => $baseDir . '/Modules/User/Http/Requests/LoginRequest.php',
