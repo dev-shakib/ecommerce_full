@@ -266,6 +266,7 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
             'Carbon\\' => 7,
             'Cache\\TagInterop\\' => 17,
             'Cache\\Hierarchy\\' => 16,
+            'Cache\\Adapter\\Filesystem\\' => 25,
             'Cache\\Adapter\\Common\\' => 21,
         ),
         'B' => 
@@ -913,6 +914,10 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'Cache\\Hierarchy\\' => 
         array (
             0 => __DIR__ . '/..' . '/cache/hierarchical-cache',
+        ),
+        'Cache\\Adapter\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cache/filesystem-adapter',
         ),
         'Cache\\Adapter\\Common\\' => 
         array (
@@ -2031,6 +2036,7 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'Cache\\Adapter\\Common\\PhpCacheItem' => __DIR__ . '/..' . '/cache/adapter-common/PhpCacheItem.php',
         'Cache\\Adapter\\Common\\PhpCachePool' => __DIR__ . '/..' . '/cache/adapter-common/PhpCachePool.php',
         'Cache\\Adapter\\Common\\TagSupportWithArray' => __DIR__ . '/..' . '/cache/adapter-common/TagSupportWithArray.php',
+        'Cache\\Adapter\\Filesystem\\FilesystemCachePool' => __DIR__ . '/..' . '/cache/filesystem-adapter/FilesystemCachePool.php',
         'Cache\\Hierarchy\\HierarchicalCachePoolTrait' => __DIR__ . '/..' . '/cache/hierarchical-cache/HierarchicalCachePoolTrait.php',
         'Cache\\Hierarchy\\HierarchicalPoolInterface' => __DIR__ . '/..' . '/cache/hierarchical-cache/HierarchicalPoolInterface.php',
         'Cache\\TagInterop\\TaggableCacheItemInterface' => __DIR__ . '/..' . '/cache/tag-interop/TaggableCacheItemInterface.php',

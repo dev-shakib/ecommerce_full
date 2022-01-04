@@ -1049,6 +1049,7 @@ return array(
     'Cache\\Adapter\\Common\\PhpCacheItem' => $vendorDir . '/cache/adapter-common/PhpCacheItem.php',
     'Cache\\Adapter\\Common\\PhpCachePool' => $vendorDir . '/cache/adapter-common/PhpCachePool.php',
     'Cache\\Adapter\\Common\\TagSupportWithArray' => $vendorDir . '/cache/adapter-common/TagSupportWithArray.php',
+    'Cache\\Adapter\\Filesystem\\FilesystemCachePool' => $vendorDir . '/cache/filesystem-adapter/FilesystemCachePool.php',
     'Cache\\Hierarchy\\HierarchicalCachePoolTrait' => $vendorDir . '/cache/hierarchical-cache/HierarchicalCachePoolTrait.php',
     'Cache\\Hierarchy\\HierarchicalPoolInterface' => $vendorDir . '/cache/hierarchical-cache/HierarchicalPoolInterface.php',
     'Cache\\TagInterop\\TaggableCacheItemInterface' => $vendorDir . '/cache/tag-interop/TaggableCacheItemInterface.php',
