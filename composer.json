@@ -13,6 +13,7 @@
         "cache/filesystem-adapter": "^1.1",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
+        "fruitcake/laravel-cors": "^2.0",
         "fzaninotto/faker": "~1.4",
         "jackiedo/dotenv-editor": "^1.0",
         "laravel/framework": "^7.0",

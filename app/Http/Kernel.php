@@ -24,6 +24,7 @@ class Kernel extends HttpKernel
         \FleetCart\Http\Middleware\TrustProxies::class,
         \FleetCart\Http\Middleware\RedirectToInstallerIfNotInstalled::class,
         \FleetCart\Http\Middleware\RunUpdater::class,
+        \Fruitcake\Cors\HandleCors::class
     ];
 
     /**
@@ -43,7 +44,7 @@ class Kernel extends HttpKernel
             'bindings',
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             // 'throttle:api',
-            // \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
 

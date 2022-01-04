@@ -14,9 +14,9 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
-        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
@@ -28,9 +28,9 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
         '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
@@ -230,6 +230,7 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         ),
         'F' => 
         array (
+            'Fruitcake\\Cors\\' => 15,
             'FleetCart\\' => 10,
             'Fideloper\\Proxy\\' => 16,
             'Faker\\' => 6,
@@ -280,6 +281,7 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         array (
             'Aws\\' => 4,
             'Astrotomic\\Translatable\\' => 24,
+            'Asm89\\Stack\\' => 12,
             'Algolia\\AlgoliaSearch\\' => 22,
         ),
     );
@@ -807,6 +809,10 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'Fruitcake\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fruitcake/laravel-cors/src',
+        ),
         'FleetCart\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -947,6 +953,10 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         array (
             0 => __DIR__ . '/..' . '/astrotomic/laravel-translatable/src/Translatable',
         ),
+        'Asm89\\Stack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
+        ),
         'Algolia\\AlgoliaSearch\\' => 
         array (
             0 => __DIR__ . '/..' . '/algolia/algoliasearch-client-php/src',
@@ -1086,6 +1096,8 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'AlternativeLaravelCache\\Store\\AlternativeFileCacheStore' => __DIR__ . '/..' . '/swayok/alternative-laravel-cache/src/AlternativeLaravelCache/Store/AlternativeFileCacheStore.php',
         'AlternativeLaravelCache\\Store\\AlternativeHierarchialFileCacheStore' => __DIR__ . '/..' . '/swayok/alternative-laravel-cache/src/AlternativeLaravelCache/Store/AlternativeHierarchialFileCacheStore.php',
         'AlternativeLaravelCache\\Store\\AlternativeRedisCacheStore' => __DIR__ . '/..' . '/swayok/alternative-laravel-cache/src/AlternativeLaravelCache/Store/AlternativeRedisCacheStore.php',
+        'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
+        'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Astrotomic\\Translatable\\Contracts\\Translatable' => __DIR__ . '/..' . '/astrotomic/laravel-translatable/src/Translatable/Contracts/Translatable.php',
         'Astrotomic\\Translatable\\Exception\\LocalesNotDefinedException' => __DIR__ . '/..' . '/astrotomic/laravel-translatable/src/Translatable/Exception/LocalesNotDefinedException.php',
         'Astrotomic\\Translatable\\Locales' => __DIR__ . '/..' . '/astrotomic/laravel-translatable/src/Translatable/Locales.php',
@@ -3413,6 +3425,8 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'FleetCart\\Scaffold\\Module\\ModuleScaffold' => __DIR__ . '/../..' . '/app/Scaffold/Module/ModuleScaffold.php',
         'FleetCart\\Scripts\\V2_0_0' => __DIR__ . '/../..' . '/app/Scripts/V2_0_0.php',
         'FleetCart\\Updater' => __DIR__ . '/../..' . '/app/Updater.php',
+        'Fruitcake\\Cors\\CorsServiceProvider' => __DIR__ . '/..' . '/fruitcake/laravel-cors/src/CorsServiceProvider.php',
+        'Fruitcake\\Cors\\HandleCors' => __DIR__ . '/..' . '/fruitcake/laravel-cors/src/HandleCors.php',
         'GuzzleHttp\\BodySummarizer' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/BodySummarizer.php',
         'GuzzleHttp\\BodySummarizerInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/BodySummarizerInterface.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
