@@ -27,7 +27,7 @@ class AuthApiController extends Controller
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
 
         $token = $user->createToken('myapptoken')->plainTextToken;
@@ -49,7 +49,7 @@ class AuthApiController extends Controller
         $user = User::where('email', $request->email)->first();
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response([
-                'message' => 'bad login pleas check your credentials',
+                'message' => 'bad login please check your credentials',
             ], 401);
         }
 

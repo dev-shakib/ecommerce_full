@@ -74,6 +74,9 @@ Vue.component('cart-index', CartIndex);
 Vue.component('checkout-create', CheckoutCreate);
 Vue.component('compare-index', CompareIndex);
 Vue.component('my-wishlist', MyWishlist);
+import axios from 'axios';
+
+
 
 new Vue({
     el: '#app',
