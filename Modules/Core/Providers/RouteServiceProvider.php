@@ -32,8 +32,12 @@ class RouteServiceProvider extends ServiceProvider
             $this->groupRoutes("Modules\\{$module->getName()}\\Http\\Controllers", function () use ($module) {
                 $this->mapAdminRoutes("{$module->getPath()}/Routes/admin.php");
                 $this->mapPublicRoutes("{$module->getPath()}/Routes/public.php");
+                // $this->mapApiRoutes("{$module->getPath()}/Routes/api.php");
+            });
+            $this->groupRoutesApi("Modules\\{$module->getName()}\\Http\\Controllers", function () use ($module) {
                 $this->mapApiRoutes("{$module->getPath()}/Routes/api.php");
             });
+
         }
     }
 
@@ -70,6 +74,19 @@ class RouteServiceProvider extends ServiceProvider
             $callback();
         });
     }
+
+    private function groupRoutesApi($namespace, $callback)
+    {
+        Route::group([
+            'namespace' => $namespace,
+            'prefix' => LaravelLocalization::setLocale(),
+            // 'middleware' => ['api'],
+        ], function () use ($callback) {
+            $callback();
+        });
+    }
+
+
 
     /**
      * Map admin routes.

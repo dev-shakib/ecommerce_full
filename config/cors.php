@@ -21,17 +21,17 @@ return [
      * You can enable CORS for 1 or multiple paths.
      * Example: ['api/*']
      */
-    'paths' => ['api/*', 'api/admin/*', '*'],
+    'paths' => ['api/*','sanctum/csrf-cookie'],
 
     /*
     * Matches the request method. `['*']` allows all methods.
     */
-    'allowed_methods' => ['POST', 'GET', 'DELETE', 'PUT', '*'],
+    'allowed_methods' => ['*'],
 
     /*
      * Matches the request origin. `['*']` allows all origins. Wildcards can be used, eg `*.mydomain.com`
      */
-    'allowed_origins' => ['http://localhost:8080','http://ecommerce_full.test/', 'http://phplaravel-692081-2338552.cloudwaysapps.com'],
+    'allowed_origins' => ['*'],
 
     /*
      * Patterns that can be used with `preg_match` to match the origin.
