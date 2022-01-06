@@ -11,8 +11,8 @@ use Modules\User\Repositories\Permission;
 use Cartalyst\Sentinel\Users\EloquentUser;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends EloquentUser implements AuthenticatableContract
 {

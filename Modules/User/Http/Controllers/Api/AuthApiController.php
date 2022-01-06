@@ -30,7 +30,7 @@ class AuthApiController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        $token = $user->createToken('myapptoken')->plainTextToken;
+        $token = $user->createToken('MyApp')->accessToken;
         $response = [
             'user' => $user,
             'token' => $token
@@ -53,7 +53,7 @@ class AuthApiController extends Controller
             ], 401);
         }
 
-        $token = $user->createToken('myapptoken')->plainTextToken;
+        $token = $user->createToken('MyApp')->accessToken; ;
         $response = [
             'user' => $user,
             'token' => $token

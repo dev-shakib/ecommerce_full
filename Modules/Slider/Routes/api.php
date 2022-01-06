@@ -2,4 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/sliders', 'SliderApiController@index');
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get('/sliders', 'SliderApiController@index');
+});
