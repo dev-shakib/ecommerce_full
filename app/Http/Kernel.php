@@ -14,6 +14,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
+        // \Fruitcake\Cors\HandleCors::class,
         \FleetCart\Http\Middleware\EncryptCookies::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \FleetCart\Http\Middleware\CheckForMaintenanceMode::class,
@@ -24,7 +25,6 @@ class Kernel extends HttpKernel
         \FleetCart\Http\Middleware\TrustProxies::class,
         \FleetCart\Http\Middleware\RedirectToInstallerIfNotInstalled::class,
         \FleetCart\Http\Middleware\RunUpdater::class,
-        \Fruitcake\Cors\HandleCors::class
     ];
 
     /**
