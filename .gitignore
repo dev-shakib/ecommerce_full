@@ -1,15 +1,39 @@
-.idea/
-.phpintel/
-*.sublime-project
-/node_modules
+# .idea/
+# .phpintel/
+# *.sublime-project
+# /node_modules
 
-/Modules/*/Assets/
-/Themes/*/assets/
-/tags
-mix-manifest.json
+# /Modules/*/Assets/
+# /Themes/*/assets/
+# /tags
+# mix-manifest.json
+# npm-debug.log
+# yarn-error.log
+# *.map
+# .env
+# .env.local
+# storage/logs/laravel.log
+
+#/vendor/
+node_modules/
 npm-debug.log
 yarn-error.log
-*.map
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+#storage/*.key
 .env
-.env.local
-storage/logs/laravel.log
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
