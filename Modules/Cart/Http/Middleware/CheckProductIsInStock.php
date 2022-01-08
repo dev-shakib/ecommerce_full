@@ -47,6 +47,8 @@ class CheckProductIsInStock
     {
         if ($request->routeIs('cart.items.store')) {
             return $request->product_id;
+        }elseif($request->routeIs('api.cart.items.store')){
+            return $request->product_id;
         }
 
         $cartItem = $this->getCartItemForUpdateRequest($request);
@@ -95,6 +97,8 @@ class CheckProductIsInStock
     private function currentCartItemQuantity(Request $request)
     {
         if ($request->routeIs('cart.items.update')) {
+            return $this->getCartItemForUpdateRequest($request)->qty;
+        }elseif ($request->routeIs('api.cart.items.update')) {
             return $this->getCartItemForUpdateRequest($request)->qty;
         }
 

@@ -64,10 +64,10 @@ class AuthApiController extends Controller
 
     public function logout(Request $request)
     {
-        if ($request->user()) {
-            $request->user()->tokens()->delete();
-        }
-
+        if (Auth::check()) {
+            $user = Auth::user()->token();
+            $user->revoke();
+         }
         return ['message' => 'logged out!'];
     }
 }
