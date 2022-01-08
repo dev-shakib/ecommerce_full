@@ -80,7 +80,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::group([
             'namespace' => $namespace,
             'prefix' => LaravelLocalization::setLocale(),
-            // 'middleware' => ['api'],
+            'middleware' => ['api'],
         ], function () use ($callback) {
             $callback();
         });

@@ -3,6 +3,7 @@
 namespace Modules\Core\Http\Middleware;
 
 use Closure;
+use Modules\Core\Http\Requests\Request;
 
 class Authenticate
 {
@@ -15,7 +16,11 @@ class Authenticate
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->check()) {
+        if ($request->wantsJson()) {
+            if(auth('api')->check()){
+                return $next($request);
+            }
+        }elseif(auth()->check()){
             return $next($request);
         }
 
@@ -27,7 +32,7 @@ class Authenticate
 
         session()->put('url.intended', $url);
 
-        if ($request->ajax()) {
+        if ($request->ajax() || $request->wantsJson()) {
             abort(403, 'Unauthenticated.');
         }
 

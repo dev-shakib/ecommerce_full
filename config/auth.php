@@ -37,12 +37,12 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'passport',
+            'driver' => 'sentinel',
             'provider' => 'users',
         ],
 
         'api' => [
-            'driver' => 'sanctum',
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
