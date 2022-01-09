@@ -44,6 +44,7 @@ class CheckoutController extends Controller
         $termsPageURL = Page::urlForPage(setting('storefront_terms_page'));
 
         return view('public.checkout.create', compact('cart', 'countries', 'gateways', 'termsPageURL'));
+
     }
 
     /**
