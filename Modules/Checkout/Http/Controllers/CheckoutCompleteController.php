@@ -27,7 +27,6 @@ class CheckoutCompleteController
             $response = $gateway->complete($order);
         } catch (Exception $e) {
             $orderService->delete($order);
-
             return response()->json([
                 'message' => $e->getMessage(),
             ], 403);

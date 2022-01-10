@@ -5776,6 +5776,7 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'Modules\\Category\\Http\\Controllers\\Admin\\CategoryController' => __DIR__ . '/../..' . '/Modules/Category/Http/Controllers/Admin/CategoryController.php',
         'Modules\\Category\\Http\\Controllers\\Admin\\CategoryTreeController' => __DIR__ . '/../..' . '/Modules/Category/Http/Controllers/Admin/CategoryTreeController.php',
         'Modules\\Category\\Http\\Controllers\\Api\\CategoryApiController' => __DIR__ . '/../..' . '/Modules/Category/Http/Controllers/Api/CategoryApiController.php',
+        'Modules\\Category\\Http\\Controllers\\Api\\CategoryProductController' => __DIR__ . '/../..' . '/Modules/Category/Http/Controllers/Api/CategoryProductController.php',
         'Modules\\Category\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/Modules/Category/Http/Controllers/CategoryController.php',
         'Modules\\Category\\Http\\Controllers\\CategoryProductController' => __DIR__ . '/../..' . '/Modules/Category/Http/Controllers/CategoryProductController.php',
         'Modules\\Category\\Http\\Requests\\SaveCategoryRequest' => __DIR__ . '/../..' . '/Modules/Category/Http/Requests/SaveCategoryRequest.php',
