@@ -26,12 +26,5 @@ class CategoryProductController
         if (request()->expectsJson()) {
             return $this->searchProducts($model, $productFilter);
         }
-
-        // $category = Category::findBySlug($slug);
-
-        // return view('public.products.index', [
-        //     'categoryName' => $category->name,
-        //     'categoryBanner' => $category->banner->path,
-        // ]);
     }
 }

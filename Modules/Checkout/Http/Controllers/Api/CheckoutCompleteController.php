@@ -39,9 +39,10 @@ class CheckoutCompleteController
 
         session()->put('placed_order', $order);
 
-        if (! request()->ajax()) {
-            return redirect()->route('checkout.complete.show');
-        }
+        return response(['message' => 'order complete']);
+        // if (! request()->ajax()) {
+        //     return redirect()->route('checkout.complete.show');
+        // }
     }
 
     /**
