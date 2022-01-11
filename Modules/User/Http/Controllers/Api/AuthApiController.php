@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\User\Entities\User;
-use Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use DB;
 
 class AuthApiController extends Controller
 {
@@ -36,7 +36,32 @@ class AuthApiController extends Controller
             'token' => $token
         ];
 
+        //assign role
+        $this->assignCustomerRole($user);
+
+        //active user
+        $this->active($user);
+
         return response($response, 201);
+    }
+
+    protected function assignCustomerRole($user)
+    {
+       return DB::table('user_roles')
+                ->insert([
+                    'user_id' => $user->id,
+                    'role_id' => 2
+                ]);
+    }
+
+    protected function active($user)
+    {
+        return DB::table('activations')
+            ->insert([
+                'user_id' => $user->id,
+                'code' => str_random(),
+                'completed' => 1
+            ]);
     }
 
     public function login(Request $request)
