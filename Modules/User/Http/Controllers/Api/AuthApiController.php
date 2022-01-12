@@ -20,7 +20,7 @@ class AuthApiController extends Controller
             'first_name' => ['required'],
             'last_name' => ['required'],
             'email' => ['required', 'email', 'unique:users,email'],
-            'phone' => ['required', 'integer'],
+            'phone' => ['required'],
             'password' => ['required', 'string', 'confirmed']
         ]);
 
