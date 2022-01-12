@@ -31,7 +31,7 @@ class WishlistController
     {
         auth('api')->user()->wishlist()->detach($productId);
         return response([
-            'meesage' => 'wish item deleted!';
+            'meesage' => 'wish item deleted!'
         ])
     }
 }
