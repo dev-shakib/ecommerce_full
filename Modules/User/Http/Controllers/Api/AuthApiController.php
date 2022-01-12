@@ -20,6 +20,7 @@ class AuthApiController extends Controller
             'first_name' => ['required'],
             'last_name' => ['required'],
             'email' => ['required', 'email', 'unique:users,email'],
+            'phone' => ['required', 'integer'],
             'password' => ['required', 'string', 'confirmed']
         ]);
 
@@ -27,6 +28,7 @@ class AuthApiController extends Controller
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
+        $user->phone = $request->phone;
         $user->password = Hash::make($request->password);
         $user->save();
 
