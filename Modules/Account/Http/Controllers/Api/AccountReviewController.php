@@ -11,12 +11,12 @@ class AccountReviewController
      */
     public function index()
     {
-        $reviews = auth()->user()
+        $reviews = auth('api')->user()
             ->reviews()
             ->with('product.files')
             ->whereHas('product')
             ->paginate(20);
 
-        return view('public.account.reviews.index', compact('reviews'));
+        return response($reviews);
     }
 }
