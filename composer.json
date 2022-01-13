@@ -15,6 +15,7 @@
         "fideloper/proxy": "^4.0",
         "fruitcake/laravel-cors": "^2.0",
         "fzaninotto/faker": "~1.4",
+        "intervention/image": "^2.7",
         "jackiedo/dotenv-editor": "^1.0",
         "laravel/framework": "^7.0",
         "laravel/helpers": "^1.1",

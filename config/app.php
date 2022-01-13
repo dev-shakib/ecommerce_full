@@ -171,14 +171,15 @@ return [
         Illuminate\Notifications\NotificationServiceProvider::class,
 
         /*
-         * Package Service Providers...
-         */
+        * Package Service Providers...
+        */
 
         /*
-         * Application Service Providers...
-         */
+        * Application Service Providers...
+        */
         FleetCart\Providers\AppServiceProvider::class,
         FleetCart\Providers\RouteServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -225,5 +226,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Module' => \Nwidart\Modules\Facades\Module::class,
+        'Image' => Intervention\Image\Facades\Image::class
     ],
 ];

@@ -133,6 +133,7 @@ return array(
     'Laminas\\Diactoros\\' => array($vendorDir . '/laminas/laminas-diactoros/src'),
     'JmesPath\\' => array($vendorDir . '/mtdowling/jmespath.php/src'),
     'Jackiedo\\DotenvEditor\\' => array($vendorDir . '/jackiedo/dotenv-editor/src/Jackiedo/DotenvEditor'),
+    'Intervention\\Image\\' => array($vendorDir . '/intervention/image/src/Intervention/Image'),
     'Instamojo\\' => array($vendorDir . '/instamojo/instamojo-php/src'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'Igoshev\\Captcha\\' => array($vendorDir . '/mehedi/laravel-captcha/src'),
