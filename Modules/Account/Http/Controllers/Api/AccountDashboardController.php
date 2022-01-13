@@ -13,7 +13,7 @@ class AccountDashboardController
     {
         return response([
             'account' => auth('api')->user(),
-            'recentOrders' => auth()->user()->recentOrders(5),
+            'recentOrders' => auth('api')->user()->recentOrders(5),
         ]);
     }
 }
