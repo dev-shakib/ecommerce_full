@@ -12,7 +12,7 @@ class AccountDashboardController
     public function index()
     {
         return response([
-            'account' => auth('api')->user(),
+            'account' => auth('api')->user()->load('address'),
             'recentOrders' => auth('api')->user()->recentOrders(5),
         ]);
     }

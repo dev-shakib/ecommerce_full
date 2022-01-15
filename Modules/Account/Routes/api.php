@@ -14,4 +14,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('account/wishlist', 'AccountWishlistController@index');
 
     Route::get('account/reviews', 'AccountReviewController@index');
+
+    Route::get('account/address', 'AccountAddressController@index');
+    Route::post('account/address', 'AccountAddressController@store');
 });

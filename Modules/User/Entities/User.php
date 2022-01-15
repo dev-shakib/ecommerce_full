@@ -30,6 +30,7 @@ class User extends EloquentUser implements AuthenticatableContract
         return static::where('email', $email)->exists();
     }
 
+
     public static function findByEmail($email)
     {
         return static::where('email', $email)->first();
@@ -207,5 +208,10 @@ class User extends EloquentUser implements AuthenticatableContract
     public function table()
     {
         return new UserTable($this->newQuery());
+    }
+
+    public function address()
+    {
+       return  $this->hasOne(Address::class);
     }
 }
