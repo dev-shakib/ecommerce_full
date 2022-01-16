@@ -38,7 +38,6 @@ class AccountAddressController extends Controller
     {
         $request->validate([
             'address_1' => ['required'],
-            'address_2' => ['required'],
             'city' => ['required'],
             'state' => ['required'],
             'zip' => ['required'],
@@ -48,32 +47,27 @@ class AccountAddressController extends Controller
         $addressExist = Address::where('user_id', auth('api')->user()->id)->get();
 
         if(count($addressExist) < 1){
-            Address::create([
-                'user_id' => auth('api')->user()->id,
-                'address_1' => $request->address_1,
-                'address_2' => $request->address_2,
-                'city' => $request->city,
-                'state' => $request->state,
-                'zip' => $request->zip,
-                'country' => $request->country
-            ]);
+                $address = new Address();
+                $address->user_id = auth('api')->user()->id;
+                $address->address_1 = $request->address_1;
+                $address->address_2 = $request->address_2;
+                $address->city = $request->city;
+                $address->state = $request->state;
+                $address->zip = $request->zip;
+                $address->country = $request->country;
+                $address->save();
+                return response($address);
         }else{
-            Address::where('user_id', auth('api')->user()->id)
-                    ->update([
-                        'address_1' => $request->address_1,
-                        'address_2' => $request->address_2,
-                        'city' => $request->city,
-                        'state' => $request->state,
-                        'zip' => $request->zip,
-                        'country' => $request->country
-                    ]);
+                $addressUpdate = new Address();
+                $addressUpdate->user_id = auth('api')->user()->id;
+                $addressUpdate->address_1 = $request->address_1;
+                $addressUpdate->address_2 = $request->address_2;
+                $addressUpdate->city = $request->city;
+                $addressUpdate->state = $request->state;
+                $addressUpdate->zip = $request->zip;
+                $addressUpdate->country = $request->country;
+                $addressUpdate->save();
+                return response($addressUpdate);
         }
-
-        return response([
-            'message' => 'Address added!'
-        ]);
-
     }
-
-
 }
