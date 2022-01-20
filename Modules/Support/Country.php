@@ -10,6 +10,7 @@ class Country
      * @var string
      */
     const RESOURCE_PATH = __DIR__ . '/Resources/countries.php';
+    const COUNTRY_WITH_PHONE_PATH = __DIR__ . '/Resources/countries_with_phone_code.php';
 
     /**
      * Array of all countries.
@@ -17,6 +18,7 @@ class Country
      * @var array
      */
     private static $countries;
+    private static $countriesWithCode;
 
     /**
      * Array of supported countries by the app.
@@ -37,6 +39,15 @@ class Country
         }
 
         return self::$countries;
+    }
+
+    public static function allWithCode()
+    {
+        if (is_null(self::$countriesWithCode)) {
+            self::$countriesWithCode = require self::COUNTRY_WITH_PHONE_PATH;
+        }
+
+        return self::$countriesWithCode;
     }
 
     /**
