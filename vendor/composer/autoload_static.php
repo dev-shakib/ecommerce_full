@@ -6203,6 +6203,7 @@ class ComposerStaticInite85c05de514d404a4ed5c919fa5654fe
         'Modules\\Support\\Eloquent\\Sluggable' => __DIR__ . '/../..' . '/Modules/Support/Eloquent/Sluggable.php',
         'Modules\\Support\\Eloquent\\Translatable' => __DIR__ . '/../..' . '/Modules/Support/Eloquent/Translatable.php',
         'Modules\\Support\\Eloquent\\TranslationModel' => __DIR__ . '/../..' . '/Modules/Support/Eloquent/TranslationModel.php',
+        'Modules\\Support\\Http\\Controllers\\Api\\CountryAndPhoneCodeController' => __DIR__ . '/../..' . '/Modules/Support/Http/Controllers/Api/CountryAndPhoneCodeController.php',
         'Modules\\Support\\Http\\Controllers\\CountryStateController' => __DIR__ . '/../..' . '/Modules/Support/Http/Controllers/CountryStateController.php',
         'Modules\\Support\\Locale' => __DIR__ . '/../..' . '/Modules/Support/Locale.php',
         'Modules\\Support\\Manager' => __DIR__ . '/../..' . '/Modules/Support/Manager.php',

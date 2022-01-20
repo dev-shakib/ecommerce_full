@@ -5127,6 +5127,7 @@ return array(
     'Modules\\Support\\Eloquent\\Sluggable' => $baseDir . '/Modules/Support/Eloquent/Sluggable.php',
     'Modules\\Support\\Eloquent\\Translatable' => $baseDir . '/Modules/Support/Eloquent/Translatable.php',
     'Modules\\Support\\Eloquent\\TranslationModel' => $baseDir . '/Modules/Support/Eloquent/TranslationModel.php',
+    'Modules\\Support\\Http\\Controllers\\Api\\CountryAndPhoneCodeController' => $baseDir . '/Modules/Support/Http/Controllers/Api/CountryAndPhoneCodeController.php',
     'Modules\\Support\\Http\\Controllers\\CountryStateController' => $baseDir . '/Modules/Support/Http/Controllers/CountryStateController.php',
     'Modules\\Support\\Locale' => $baseDir . '/Modules/Support/Locale.php',
     'Modules\\Support\\Manager' => $baseDir . '/Modules/Support/Manager.php',
