@@ -1,8 +1,8 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: https://unruffled-hamilton-b15e82.netlify.app");
 //header("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS");
-header('Access-Control-Allow-Headers: *');
-// header("Access-Control-Allow-Credentials:true");
+header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+header("Access-Control-Allow-Credentials:true");
 
 if ($_SERVER['REQUEST_METHOD'] == "OPTIONS") {//send back preflight request response
 return "";
