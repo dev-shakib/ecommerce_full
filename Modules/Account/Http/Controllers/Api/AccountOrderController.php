@@ -29,7 +29,7 @@ class AccountOrderController
      */
     public function show($id)
     {
-        $order = auth()->user()
+        $order = auth('api')->user()
             ->orders()
             ->with(['products', 'coupon', 'taxes'])
             ->where('id', $id)
