@@ -35,6 +35,7 @@ class AccountOrderController
             ->where('id', $id)
             ->firstOrFail();
 
-        return view('public.account.orders.show', compact('order'));
+        return $order;
+        // return view('public.account.orders.show', compact('order'));
     }
 }
