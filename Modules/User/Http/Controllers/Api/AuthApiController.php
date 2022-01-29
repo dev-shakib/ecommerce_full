@@ -10,6 +10,9 @@ use Modules\User\Entities\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use DB;
+use Exception;
+use Laravel\Socialite\Facades\Socialite;
+use Modules\User\LoginProvider;
 
 class AuthApiController extends Controller
 {
@@ -96,5 +99,70 @@ class AuthApiController extends Controller
             $user->revoke();
          }
         return ['message' => 'logged out!'];
+    }
+
+        /**
+     * Redirect the user to the given provider authentication page.
+     *
+     * @param string $provider
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider($provider)
+    {
+        if (! LoginProvider::isEnable($provider)) {
+            abort(404);
+        }
+
+        $this->udateSocialProviderRedirect($provider);
+
+        return Socialite::driver($provider)->redirect();
+    }
+
+    /**
+     * Obtain the user information from the given provider.
+     *
+     * @param string $provider
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback($provider)
+    {
+        if (! LoginProvider::isEnable($provider)) {
+            abort(404);
+        }
+
+        $this->udateSocialProviderRedirect($provider);
+
+        try {
+            $user = Socialite::driver($provider)->user();
+        } catch (Exception $e) {
+            return redirect()->route('login')->with('error', $e->getMessage());
+        }
+
+        if (User::registered($user->getEmail())) {
+
+            return redirect(env('CLIENT_BASE_URL').'?token='.$user->token);
+        }
+
+        [$firstName, $lastName] = $this->extractName($user->getName());
+
+        $registeredUser = $this->auth->registerAndActivate([
+            'first_name' => $firstName,
+            'last_name' => $lastName,
+            'email' => $user->getEmail(),
+            'password' => str_random(),
+        ]);
+
+        $this->assignCustomerRole($registeredUser);
+
+        auth()->login($registeredUser);
+
+        return redirect(env('CLIENT_BASE_URL').'?token='.$user->token);
+    }
+
+    public function udateSocialProviderRedirect($provider)
+    {
+        $providerKey = "services.".$provider.".redirect";
+        $url = "api/login/$provider/callback";
+        return config([$providerKey => url($url) ]);
     }
 }
