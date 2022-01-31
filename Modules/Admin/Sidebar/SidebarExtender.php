@@ -41,6 +41,14 @@ class SidebarExtender extends BaseSidebarExtender
                     $this->auth->hasAnyAccess(['admin.importer.index'])
                 );
             });
+            $group->item('Support', function (Item $item) {
+                $item->icon('fa fa-wrench');
+                $item->weight(20);
+                $item->route('admin.support.index');
+                $item->authorize(
+                    $this->auth->hasAnyAccess(['admin.importer.index'])
+                );
+            });
         });
     }
 }

@@ -96,6 +96,34 @@
                                 <div class="row">
                                     <div class="col-md-9">
                                         <div class="form-group">
+                                            <label for="f_name">
+                                                {{ 'First Name' }}<span>*</span>
+                                            </label>
+
+                                            <input type="text" name="f_name" value="{{ old('f_name') }}" id="f_name" class="form-control">
+
+                                            @error('f_name')
+                                                <span class="error-message">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <div class="form-group">
+                                            <label for="l_name">
+                                                {{ 'Last Name' }}<span>*</span>
+                                            </label>
+
+                                            <input type="text" name="l_name" value="{{ old('l_name') }}" id="l_name" class="form-control">
+
+                                            @error('l_name')
+                                                <span class="error-message">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <div class="form-group">
                                             <label for="email">
                                                 {{ trans('contact::attributes.email') }}<span>*</span>
                                             </label>
@@ -117,6 +145,34 @@
                                             <input type="text" name="subject" value="{{ old('subject') }}" id="subject" class="form-control">
 
                                             @error('subject')
+                                                <span class="error-message">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <div class="form-group">
+                                            <label for="phone">
+                                                {{ 'Phone' }}<span>*</span>
+                                            </label>
+
+                                            <input type="text" name="phone" value="{{ old('phone') }}" id="phone" class="form-control">
+
+                                            @error('phone')
+                                                <span class="error-message">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <div class="form-group">
+                                            <label for="attachment">
+                                                {{ 'Attachment' }}
+                                            </label>
+
+                                            <input type="file" name="attachment" value="{{ old('attachment') }}" id="attachment" class="form-control">
+
+                                            @error('attachment')
                                                 <span class="error-message">{{ $message }}</span>
                                             @enderror
                                         </div>

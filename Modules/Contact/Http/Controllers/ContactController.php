@@ -4,6 +4,7 @@ namespace Modules\Contact\Http\Controllers;
 
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
+use Modules\Admin\Entities\Support;
 use Modules\Contact\Http\Requests\ContactRequest;
 
 class ContactController
@@ -26,6 +27,16 @@ class ContactController
      */
     public function store(ContactRequest $request)
     {
+        $addSupport = new Support();
+        $addSupport->f_name = $request->f_name;
+        $addSupport->l_name = $request->l_name;
+        $addSupport->email = $request->email;
+        $addSupport->subject = $request->subject;
+        $addSupport->phone = $request->phone;
+        $addSupport->status = 'open';
+        $addSupport->message = $request->message;
+        $addSupport->save();
+
         Mail::raw($request->message, function (Message $message) use ($request) {
             $message->subject($request->subject)
                 ->replyTo($request->email)
