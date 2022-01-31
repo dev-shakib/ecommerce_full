@@ -21,7 +21,7 @@ class SupportController
     {
         if (request()->ajax()) {
 
-            $data = Support::select('*');
+            $data = Support::select('*')->orderBy('id', 'desc');
 
             return Datatables::of($data)
                 ->addIndexColumn()

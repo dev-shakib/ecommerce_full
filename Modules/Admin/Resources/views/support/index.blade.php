@@ -16,6 +16,7 @@
                     <th data-sort>{{ __('id') }}</th>
                     <th>{{ __('First Name') }}</th>
                     <th>{{ __('Email') }}</th>
+                    <th>{{ __('Phone') }}</th>
                     <th>{{ __('Status') }}</th>
                     <th>{{ __('Action') }}</th>
 
@@ -45,6 +46,7 @@ var table = $('#support-table').DataTable({
         { data: 'id', name: 'id', width: '5%' },
         { data: 'f_name', name: 'f_name', orderable: false, defaultContent: '' },
         { data: 'email', name: 'email' },
+        { data: 'phone', name: 'phone' },
         { data: 'status', name: 'status' },
         {data: 'action', name: 'action', orderable: false, searchable: false},
     ]

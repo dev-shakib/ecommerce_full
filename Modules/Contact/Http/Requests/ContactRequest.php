@@ -19,7 +19,7 @@ class ContactRequest extends Request
             'f_name' => ['required'],
             'l_name' => ['required'],
             'phone' => ['required'],
-            'attachment' => ['sometimes'],
+            'attachment' => ['sometimes', 'max:1000'],
             'email' => ['required', 'email'],
             'subject' => ['required'],
             'message' => ['required'],

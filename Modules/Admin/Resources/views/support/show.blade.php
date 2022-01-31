@@ -10,7 +10,7 @@
 <table class="table table-striped table-dark">
     <thead>
         <tr>
-            <th scope="col">Title</th>
+            <th scope="col" style="width: 200px">Title</th>
             <th scope="col">Info</th>
             <th scope="col"></th>
         </tr>
@@ -46,6 +46,16 @@
         <tr>
             <td>Message: </td>
             <td>{{ $support->message}}</td>
+        </tr>
+        <tr>
+            <td>Attachments: </td>
+            <td>
+                @if($support->attachment)
+                    @foreach (json_decode($support->attachment) as $attachment)
+                        <a href="{{ asset('storage/support/'.$attachment) }}" target="_blank">{{ $attachment }}</a><br>
+                    @endforeach
+                @endif
+            </td>
         </tr>
         <tr>
             <td>Status: </td>

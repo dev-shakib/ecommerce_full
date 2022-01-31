@@ -90,7 +90,7 @@
                         <h3 class="title">{{ trans('storefront::contact.leave_a_message') }}</h3>
 
                         <div class="contact-form">
-                            <form method="POST" action="{{ route('contact.store') }}">
+                            <form method="POST" action="{{ route('contact.store') }}" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="row">
@@ -170,7 +170,7 @@
                                                 {{ 'Attachment' }}
                                             </label>
 
-                                            <input type="file" name="attachment" value="{{ old('attachment') }}" id="attachment" class="form-control">
+                                            <input type="file" name="attachment[]" value="{{ old('attachment') }}" id="attachment" class="form-control" multiple >
 
                                             @error('attachment')
                                                 <span class="error-message">{{ $message }}</span>
