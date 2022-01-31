@@ -17,6 +17,10 @@
     </thead>
     <tbody>
         <tr>
+            <td>Date: </td>
+            <td>{{ $support->created_at}}</td>
+        </tr>
+        <tr>
             <td>First Name: </td>
             <td>{{ $support->f_name}}</td>
         </tr>

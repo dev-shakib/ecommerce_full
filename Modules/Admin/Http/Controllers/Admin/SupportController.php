@@ -29,6 +29,9 @@ class SupportController
                     $btn = '<a href="/admin/support/'.$row->id.'" class="edit btn btn-primary btn-sm">View</a>';
                     return $btn;
                 })
+                ->addColumn('time', function ($row) {
+                    return @$row->created_at->diffForHumans();
+                })
                 ->rawColumns(['action'])
                 ->orderColumn('id', '-id $1')
                 ->make(true);

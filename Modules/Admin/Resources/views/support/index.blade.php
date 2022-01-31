@@ -18,6 +18,7 @@
                     <th>{{ __('Email') }}</th>
                     <th>{{ __('Phone') }}</th>
                     <th>{{ __('Status') }}</th>
+                    <th>{{ __('Time') }}</th>
                     <th>{{ __('Action') }}</th>
 
                 </tr>
@@ -48,6 +49,7 @@ var table = $('#support-table').DataTable({
         { data: 'email', name: 'email' },
         { data: 'phone', name: 'phone' },
         { data: 'status', name: 'status' },
+        { data: 'time', name: 'time' },
         {data: 'action', name: 'action', orderable: false, searchable: false},
     ]
 });
