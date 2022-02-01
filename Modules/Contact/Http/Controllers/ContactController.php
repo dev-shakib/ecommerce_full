@@ -48,6 +48,13 @@ class ContactController
         $addSupport->attachment = json_encode($imgeNameArr);
         $addSupport->save();
 
+        $messageText = 'Thank you for contacting us. We will get back to you soon.';
+        Mail::raw($messageText, function (Message $message) use ($request) {
+            $message->subject('Thank you for reaching GalaxyTelecom Support')
+                // ->replyTo($request->email)
+                ->to($request->email);
+        });
+
         Mail::raw($request->message, function (Message $message) use ($request) {
             $message->subject($request->subject)
                 ->replyTo($request->email)
