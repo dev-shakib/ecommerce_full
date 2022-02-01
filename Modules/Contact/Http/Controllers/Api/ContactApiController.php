@@ -1,23 +1,14 @@
 <?php
 
-namespace Modules\Contact\Http\Controllers;
+namespace Modules\Contact\Http\Controllers\Api;
 
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
 use Modules\Admin\Entities\Support;
-use Modules\Contact\Http\Requests\ContactRequest;
+use Modules\Contact\Http\Requests\ContactApiRequest;
 
-class ContactController
+class ContactApiController
 {
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('public.contact.create');
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -25,7 +16,7 @@ class ContactController
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ContactRequest $request)
+    public function store(ContactApiRequest $request)
     {
         $imgeNameArr = [];
 
@@ -60,6 +51,6 @@ class ContactController
                 ->to(setting('store_email'));
         });
 
-        return back()->with('success', trans('contact::messages.your_message_has_been_sent'));
+        return response()->json(['success' => 'Nessage sent successfully.']);
     }
 }
