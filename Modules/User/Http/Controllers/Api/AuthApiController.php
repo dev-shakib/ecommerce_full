@@ -83,7 +83,7 @@ class AuthApiController extends Controller
             ], 401);
         }
 
-        $token = $user->createToken('MyApp')->accessToken; ;
+        $token = $user->createToken('MyApp')->accessToken;
         $response = [
             'user' => $user,
             'token' => $token
@@ -139,8 +139,9 @@ class AuthApiController extends Controller
         }
 
         if (User::registered($user->getEmail())) {
-
-            return redirect(env('CLIENT_BASE_URL').'?token='.$user->token);
+            $realUser = User::where('email', $user->getEmail())->first();
+            $token = $realUser->createToken('MyApp')->accessToken;
+            return redirect(env('CLIENT_BASE_URL').'?token='.$token);
         }
 
         [$firstName, $lastName] = $this->extractName($user->getName());
@@ -155,8 +156,9 @@ class AuthApiController extends Controller
         $this->assignCustomerRole($registeredUser);
 
         auth()->login($registeredUser);
-
-        return redirect(env('CLIENT_BASE_URL').'?token='.$user->token);
+        $realUser = User::where('email', $user->getEmail())->first();
+        $token = $realUser->createToken('MyApp')->accessToken;
+        return redirect(env('CLIENT_BASE_URL').'?token='.$token);
     }
 
     public function udateSocialProviderRedirect($provider)
