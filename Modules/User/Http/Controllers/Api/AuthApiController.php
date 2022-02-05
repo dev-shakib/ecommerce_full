@@ -146,18 +146,32 @@ class AuthApiController extends Controller
 
         [$firstName, $lastName] = $this->extractName($user->getName());
 
-        $registeredUser = $this->auth->registerAndActivate([
-            'first_name' => $firstName,
-            'last_name' => $lastName,
-            'email' => $user->getEmail(),
-            'password' => str_random(),
-        ]);
+        // $registeredUser = $this->auth->registerAndActivate([
+        //     'first_name' => $firstName,
+        //     'last_name' => $lastName,
+        //     'email' => $user->getEmail(),
+        //     'password' => str_random(),
+        // ]);
 
-        $this->assignCustomerRole($registeredUser);
+        // $this->assignCustomerRole($registeredUser);
 
-        auth()->login($registeredUser);
-        $realUser = User::where('email', $user->getEmail())->first();
-        $token = $realUser->createToken('MyApp')->accessToken;
+        // auth()->login($registeredUser);
+
+        $newUser = new User();
+        $newUser->first_name = $firstName;
+        $newUser->last_name = $lastName;
+        $newUser->email = $user->getEmail();
+        $newUser->password = str_random();
+        $newUser->save();
+
+        //assign role
+        $this->assignCustomerRole($newUser);
+
+        //active user
+        $this->active($newUser);
+
+        // $realUser = User::where('email', $user->getEmail())->first();
+        $token = $newUser->createToken('MyApp')->accessToken;
         return redirect(env('CLIENT_BASE_URL').'?token='.$token);
     }
 
@@ -166,5 +180,10 @@ class AuthApiController extends Controller
         $providerKey = "services.".$provider.".redirect";
         $url = "api/login/$provider/callback";
         return config([$providerKey => url($url) ]);
+    }
+
+    private function extractName($name)
+    {
+        return explode(' ', $name, 2);
     }
 }
