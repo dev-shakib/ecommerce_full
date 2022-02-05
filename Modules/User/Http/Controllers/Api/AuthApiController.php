@@ -156,7 +156,7 @@ class AuthApiController extends Controller
         // $this->assignCustomerRole($registeredUser);
 
         // auth()->login($registeredUser);
-
+            dd($user);
         $newUser = new User();
         $newUser->first_name = $firstName;
         $newUser->last_name = $lastName;
