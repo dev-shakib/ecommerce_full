@@ -1,4 +1,4 @@
-<ul class="list-inline">
+{{-- <ul class="list-inline">
     @foreach ($subMenus as $subMenu)
         <li class="{{ $subMenu->hasItems() ? 'dropdown sub-menu' : '' }}">
             <a href="{{ $subMenu->url() }}" target="{{ $subMenu->target() }}">
@@ -10,4 +10,4 @@
             @endif
         </li>
     @endforeach
-</ul>
+</ul> --}}

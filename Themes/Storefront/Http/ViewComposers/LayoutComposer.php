@@ -104,6 +104,7 @@ class LayoutComposer
     private function getCategories()
     {
         return Category::searchable();
+
     }
 
     private function getMostSearchedKeywords()
@@ -120,7 +121,11 @@ class LayoutComposer
 
     private function getCategoryMenu()
     {
-        return new MegaMenu(setting('storefront_category_menu'));
+        $data = Category::all()->nest();
+        return $data->reverse();
+
+        // dd(Category::all()->nest());
+        // return new MegaMenu(setting('storefront_category_menu'));
     }
 
     private function getCart()
