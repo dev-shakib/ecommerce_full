@@ -21,12 +21,13 @@
         "laravel-mix-merge-manifest": "^0.1.2",
         "lerna": "^2.9.0",
         "rtlcss": "^2.4.0",
-        "sass": "^1.25.0",
-        "sass-loader": "^8.0.2",
+        "sass": "^1.22.10",
+        "sass-loader": "^7.1.0",
         "vue-template-compiler": "^2.6.11",
         "webpack-shell-plugin": "^0.5.0"
     },
     "dependencies": {
+        "axios": "^0.26.0",
         "yarn": "^1.22.17"
     }
 }
