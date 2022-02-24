@@ -27,7 +27,7 @@ class Category extends Model
      *
      * @var array
      */
-    protected $fillable = ['parent_id', 'slug', 'position', 'is_searchable', 'is_active'];
+    protected $fillable = ['parent_id', 'slug', 'position', 'is_searchable', 'is_active', 'is_show_in_menu'];
 
     /**
      * The attributes that should be hidden for serialization.

@@ -88,6 +88,7 @@ export default class {
 
     update(category) {
         window.form.removeErrors();
+        console.log('hello');
 
         $('.btn-delete').removeClass('hide');
         $('.form-group .help-block').remove();
@@ -105,6 +106,7 @@ export default class {
 
         $('#is_searchable').prop('checked', category.is_searchable);
         $('#is_active').prop('checked', category.is_active);
+        $('#is_show_in_menu').prop('checked', category.is_show_in_menu);
 
         $('.logo .image-holder-wrapper').html(this.categoryImage('logo', category.logo));
         $('.banner .image-holder-wrapper').html(this.categoryImage('banner', category.banner));
@@ -138,6 +140,7 @@ export default class {
 
         $('#is_searchable').prop('checked', false);
         $('#is_active').prop('checked', false);
+        $('#is_show_in_menu').prop('checked', false);
 
         $('.logo .image-holder-wrapper').html(this.imagePlaceholder());
         $('.banner .image-holder-wrapper').html(this.imagePlaceholder());

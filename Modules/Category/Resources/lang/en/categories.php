@@ -16,6 +16,7 @@ return [
     ],
     'form' => [
         'show_this_category_in_search_box' => 'Show this category in search box category list',
+        'show_this_category_in_menu' => 'Show this category in menu list',
         'enable_the_category' => 'Enable the category',
         'logo' => 'Logo',
         'banner' => 'Banner',
