@@ -122,6 +122,8 @@ class LayoutComposer
     private function getCategoryMenu()
     {
         $data = Category::all()->nest();
+
+        
         return $data->reverse();
 
         // dd(Category::all()->nest());

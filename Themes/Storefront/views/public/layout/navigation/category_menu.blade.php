@@ -9,24 +9,27 @@
                 <ul class="list-inline mega-menu vertical-megamenu">
 
                     @foreach ($categoryMenu as $item)
-                    <li class="dropdown multi-level">
-                        <a href="{{url("categories/$item->slug/products")}}" class="nav-link menu-item"  data-text="">
-                            {{ $item->name }}
-                        </a>
-                        @if (count($item->items) > 0)
-                            <ul class="list-inline sub-menu">
-                                @foreach ($item->items as $item)
-                                <li class="">
-                                    <a href="{{url("categories/$item->slug/products")}}" target="">
-                                        {{ $item->name }}
-                                    </a>
+                    @if ($item->is_show_in_menu)
+                        <li class="dropdown multi-level">
+                            <a href="{{url("categories/$item->slug/products")}}" class="nav-link menu-item"  data-text="">
+                                {{ $item->name }}
+                            </a>
+                            @if (count($item->items) > 0)
+                                <ul class="list-inline sub-menu">
+                                    @foreach ($item->items as $item)
+                                    <li class="">
+                                        <a href="{{url("categories/$item->slug/products")}}" target="">
+                                            {{ $item->name }}
+                                        </a>
 
-                                    </li>
-                                @endforeach
+                                        </li>
+                                    @endforeach
 
-                            </ul>
-                        @endif
-                    </li>
+                                </ul>
+                            @endif
+                        </li>
+                    @endif
+
                     @endforeach
 
                     <li class="more-categories">
