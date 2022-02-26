@@ -27510,6 +27510,7 @@ textarea.form-control {
 	position: inherit;
 }
 .category-nav-inner + .category-dropdown {
+    height: auto !important;
 	box-shadow: 0px 0px 3px #e3e3e3;
 }
 .text-bg {
